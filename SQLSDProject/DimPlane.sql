@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[DimPlane]
+(
+	[Id] INT NOT NULL PRIMARY KEY
+)
