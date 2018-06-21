@@ -1,4 +1,6 @@
 ﻿CREATE TABLE [dbo].[DimCarrier]
 (
-	[Id] INT NOT NULL PRIMARY KEY
+	[CarrierKey] INT NOT NULL PRIMARY KEY, 
+    [Code] VARCHAR(16) NOT NULL, 
+    [Description] VARCHAR(128) NULL
 )
