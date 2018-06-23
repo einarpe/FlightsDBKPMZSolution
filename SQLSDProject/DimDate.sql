@@ -1,16 +1,12 @@
 ﻿CREATE TABLE [dbo].[DimDate]
 (
-	[DateKey] INT NOT NULL PRIMARY KEY, 
-    [DateTimeValue] DATETIME2 NOT NULL, 
+	[DateKey] int NOT NULL  identity(1,1) PRIMARY KEY, 
+	[DateValue] DATETIME2 NOT NULL UNIQUE,
     [Year] SMALLINT NOT NULL, 
     [Month] TINYINT NOT NULL, 
     [Day] TINYINT NOT NULL, 
 	[DayOfWeek] TINYINT NOT NULL,
-    [Hour] TINYINT NOT NULL, 
-    [Minute] TINYINT NOT NULL, 
-    [Second] TINYINT NOT NULL, 
-    [ShortDateString] CHAR(10) NOT NULL, 
-    [LongDateString] CHAR(19) NOT NULL,
+    [ShortDateString] CHAR(10) NOT NULL,
 	[DayOfWeekString] as 
 		(case [DayOfWeek]
 			when 1 then 'Monday'

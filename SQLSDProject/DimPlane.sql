@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[DimPlane]
 (
 	/* tailnum,type,manufacturer,issue_date,model,status,aircraft_type,engine_type,year */
-	[PlaneKey] INT NOT NULL PRIMARY KEY,
+	[PlaneKey] INT NOT NULL identity(1,1) PRIMARY KEY,
 	[TailNum] varchar(6) not null,
 	[Type] varchar(64),
 	[Manufacturer] varchar(32),
