@@ -58,4 +58,15 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="DimAirport.sql" />
+    <Build Include="DimCarrier.sql" />
+    <Build Include="DimDate.sql" />
+    <Build Include="DimPlane.sql" />
+    <Build Include="FactFlights.sql" />
+    <Build Include="Install.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SQLSDProject.refactorlog" />
+  </ItemGroup>
 </Project>

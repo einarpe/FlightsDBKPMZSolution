@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="31cb7cf1-ca5a-465f-b9c2-f0286415f034" ChangeDateTime="06/21/2018 18:08:10">
+    <Property Name="ElementName" Value="[dbo].[FactFlights].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FactFlights]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4d140aa1-cadf-47e1-b93c-475249232516" ChangeDateTime="06/21/2018 18:10:05">
+    <Property Name="ElementName" Value="[dbo].[FactFlights].[DateString]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FactFlights]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Hour" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="73af1192-1fce-483a-99e3-ca3c0a0de02f" ChangeDateTime="06/21/2018 18:10:36">
+    <Property Name="ElementName" Value="[dbo].[FactFlights].[DateFormatted]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FactFlights]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ShortDateString" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c7215061-33a7-47aa-9a93-666d6b36f509" ChangeDateTime="06/21/2018 18:26:30">
+    <Property Name="ElementName" Value="[dbo].[DimAirport].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DimAirport]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AirportKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6c9599d3-7007-48fa-8e1a-4cc3c7a9c46d" ChangeDateTime="06/21/2018 18:32:10">
+    <Property Name="ElementName" Value="[dbo].[DimCarrier].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DimCarrier]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CarrierK" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="86f4226b-d4a7-4d83-9c3b-b81bd6009cc1" ChangeDateTime="06/21/2018 18:32:17">
+    <Property Name="ElementName" Value="[dbo].[DimCarrier].[CarrierK]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DimCarrier]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CarrierKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="83e192ab-4d2c-42e5-973f-4fbf8d5c0548" ChangeDateTime="06/21/2018 18:51:06">
+    <Property Name="ElementName" Value="[dbo].[DimPlane].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DimPlane]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PlaneKey" />
+  </Operation>
+</Operations>

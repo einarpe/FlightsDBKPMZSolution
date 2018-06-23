@@ -10,27 +10,28 @@
       DTS:HeaderRowDelimiter="_x000D__x000A_"
       DTS:ColumnNamesInFirstDataRow="True"
       DTS:RowDelimiter=""
-      DTS:TextQualifier="_x003C_none_x003E_"
+      DTS:DataRowsToSkip="300"
+      DTS:TextQualifier="_x0022_"
       DTS:CodePage="1250"
       DTS:ConnectionString="D:\Studia\HurtownieDanych\FlightsDBKPMZSolution\CSVData\carriers.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="8"
+          DTS:MaximumWidth="16"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Code"
-          DTS:DTSID="{EDFBE1D4-ECDD-4F61-94C3-66C45F36342E}"
+          DTS:DTSID="{358284D9-7FDC-47E0-B1B3-8CAAB4FFCF09}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x000D__x000A_"
-          DTS:MaximumWidth="50"
+          DTS:MaximumWidth="128"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Description"
-          DTS:DTSID="{B539EB98-1144-4C89-A040-F61D9AC25662}"
+          DTS:DTSID="{028156B3-E46B-43FA-9FEF-2AAD79E43675}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>
