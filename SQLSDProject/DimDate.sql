@@ -9,12 +9,12 @@
     [ShortDateString] CHAR(10) NOT NULL,
 	[DayOfWeekString] as 
 		(case [DayOfWeek]
-			when 1 then 'Monday'
-			when 2 then 'Tuesday'
-			when 3 then 'Wednesday'
-			when 4 then 'Thursday'
-			when 5 then 'Friday'
-			when 6 then 'Saturday'
-			when 7 then 'Sunday'
+			when 2 then 'Monday'
+			when 3 then 'Tuesday'
+			when 4 then 'Wednesday'
+			when 5 then 'Thursday'
+			when 6 then 'Friday'
+			when 7 then 'Saturday'
+			when 1 then 'Sunday'
 		end) 
 )
