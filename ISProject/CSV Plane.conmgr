@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
-  DTS:ObjectName="CSV Airport"
-  DTS:DTSID="{C0920A53-4092-4E2C-9F78-682D4FB98970}"
+  DTS:ObjectName="CSV Plane"
+  DTS:DTSID="{7BE4B21A-CA37-4B22-82B8-2F7904528AA5}"
   DTS:CreationName="FLATFILE">
   <DTS:ObjectData>
     <DTS:ConnectionManager
@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1250"
-      DTS:ConnectionString="D:\Studia\HurtownieDanych\FlightsDBKPMZSolution\CSVData\airports.csv">
+      DTS:ConnectionString="D:\Studia\HurtownieDanych\FlightsDBKPMZSolution\CSVData\plane-data.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -20,35 +20,43 @@
           DTS:MaximumWidth="6"
           DTS:DataType="129"
           DTS:TextQualified="True"
-          DTS:ObjectName="&quot;iata&quot;"
-          DTS:DTSID="{32A6BE4D-58D9-4539-8C3A-0C000ACC5ABD}"
+          DTS:ObjectName="tailnum"
+          DTS:DTSID="{F88D5E00-83ED-4F57-8997-CAFDC1909E07}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="33"
+          DTS:MaximumWidth="11"
           DTS:DataType="129"
           DTS:TextQualified="True"
-          DTS:ObjectName="&quot;airport&quot;"
-          DTS:DTSID="{3C414A27-316E-44A0-BA86-FD07882FAED8}"
+          DTS:ObjectName="type"
+          DTS:DTSID="{E18ABE9B-0B32-4668-8AD8-E298DCC6804F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="30"
+          DTS:MaximumWidth="17"
           DTS:DataType="129"
           DTS:TextQualified="True"
-          DTS:ObjectName="&quot;city&quot;"
-          DTS:DTSID="{7431A5D5-816B-4A9D-A5E0-86AD8B7CE543}"
+          DTS:ObjectName="manufacturer"
+          DTS:DTSID="{6393C25B-1BD6-4D44-B04D-9E10D5094F08}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="4"
+          DTS:DataType="7"
+          DTS:TextQualified="True"
+          DTS:ObjectName="issue_date"
+          DTS:DTSID="{94E74C03-FDCC-4301-90C8-E67EA60127C5}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="9"
           DTS:DataType="129"
           DTS:TextQualified="True"
-          DTS:ObjectName="&quot;state&quot;"
-          DTS:DTSID="{AA8E8BC6-8FDB-482F-8E06-C9D119E737EE}"
+          DTS:ObjectName="model"
+          DTS:DTSID="{50B5A25B-4457-4CCE-80FE-D543569F25B1}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -56,28 +64,34 @@
           DTS:MaximumWidth="5"
           DTS:DataType="129"
           DTS:TextQualified="True"
-          DTS:ObjectName="&quot;country&quot;"
-          DTS:DTSID="{EE4CAE53-A5F9-45C5-99EF-F8A5951EBFF2}"
+          DTS:ObjectName="status"
+          DTS:DTSID="{E35D7253-A860-47FA-80CB-9A806C995BEC}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:DataType="131"
-          DTS:DataPrecision="14"
-          DTS:DataScale="10"
+          DTS:MaximumWidth="23"
+          DTS:DataType="129"
           DTS:TextQualified="True"
-          DTS:ObjectName="&quot;lat&quot;"
-          DTS:DTSID="{1A5CA598-540B-471C-9162-4F8B62316096}"
+          DTS:ObjectName="aircraft_type"
+          DTS:DTSID="{CE363B00-C434-45D2-888F-3CF8D49A3DDB}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="9"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="engine_type"
+          DTS:DTSID="{7F576AEE-B477-4956-8B8C-7DE3905AC768}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x000A_"
-          DTS:DataType="131"
-          DTS:DataPrecision="14"
-          DTS:DataScale="10"
+          DTS:DataType="3"
           DTS:TextQualified="True"
-          DTS:ObjectName="&quot;long&quot;"
-          DTS:DTSID="{69685172-DFF1-4428-842D-BB1FED1B6ABE}"
+          DTS:ObjectName="year"
+          DTS:DTSID="{60B28FBA-44CD-4DF7-B266-3107F68DC9FC}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

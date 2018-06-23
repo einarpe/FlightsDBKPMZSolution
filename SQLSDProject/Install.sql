@@ -1,4 +1,12 @@
-﻿
+﻿/*
+-- 
+declare @dt date = '1987-01-01'
+while @dt < GETDATE()
+begin
+
+
+end
+*/
 
 CREATE SCHEMA [raporty]
 go
