@@ -3,13 +3,13 @@
 	/* tailnum,type,manufacturer,issue_date,model,status,aircraft_type,engine_type,year */
 	[PlaneKey] INT NOT NULL identity(1,1) PRIMARY KEY,
 	[TailNum] varchar(6) not null UNIQUE,
-	[Type] nvarchar(64),
-	[Manufacturer] nvarchar(32),
+	[Type] varchar(64),
+	[Manufacturer] varchar(32),
 	[IssueDate] datetime2,
-	[Model] nvarchar(32),
-	[Status] nvarchar(16),
-	[AircraftType] nvarchar(64),
-	[EngineType] nvarchar(32),
+	[Model] varchar(32),
+	[Status] varchar(16),
+	[AircraftType] varchar(64),
+	[EngineType] varchar(32),
 	[Year] smallint
 
 )

@@ -1,4 +1,8 @@
-﻿
+﻿create database FlightsDB
+go
+
+use FlightsDB
+go
 
 create proc fillUpDimDate as
 begin

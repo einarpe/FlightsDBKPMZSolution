@@ -7,12 +7,12 @@
   DTS:CreatorName="KAFFEIN\kuba"
   DTS:DTSID="{5743507C-6CF2-4AEB-9405-086AFB45406D}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.0800.90"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL DimCarrier"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{11F3B439-FF87-4267-A679-1BE9346EF261}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{932CB27C-E6A6-47A7-BB23-7FF07F0BCAD0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -299,13 +299,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
+      DTS:refId="Package\Exec SQL Trunc"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{4D167846-E97E-4481-8405-083A8F3A6A4C}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
+      DTS:ObjectName="Exec SQL Trunc"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -321,7 +321,7 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{BFB219A1-3AB3-44D1-A2B5-41C9B5D6AD2D}"
-      DTS:From="Package\Execute SQL Task"
+      DTS:From="Package\Exec SQL Trunc"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
@@ -339,27 +339,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="170,42"
-          Id="Package\Execute SQL Task"
-          TopLeft="112,142" />
-        <NodeLayout
-          Size="155,42"
+          Size="155.2,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="119,264" />
+          TopLeft="106.999999795641,261.552941142152" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Exec SQL Trunc"
+          TopLeft="112,142" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="196.75,184">
+          TopLeft="186.499999897821,183.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,80"
+              EndConnector="0,77.9529411421515"
               Start="0,0"
-              End="0,72.5">
+              End="0,70.4529411421515">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,72.5" />
+                    End="0,70.4529411421515" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -377,13 +377,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="162,42"
-          Id="Package\Data Flow Task\FFS CSV Carrier"
-          TopLeft="106,107" />
-        <NodeLayout
-          Size="175,42"
+          Size="175.2,41.6"
           Id="Package\Data Flow Task\OLE DB DimCarrier"
           TopLeft="92,276" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Data Flow Task\FFS CSV Carrier"
+          TopLeft="106,107" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="183.25,149">
