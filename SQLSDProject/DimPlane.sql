@@ -7,9 +7,9 @@
 	[Manufacturer] varchar(32),
 	[IssueDate] datetime2,
 	[Model] varchar(32),
-	[Status] varchar(16),
+	[Status] varchar(32),
 	[AircraftType] varchar(64),
 	[EngineType] varchar(32),
-	[Year] smallint
+	[Year] int
 
 )

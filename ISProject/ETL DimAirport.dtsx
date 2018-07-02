@@ -7,12 +7,12 @@
   DTS:CreatorName="KAFFEIN\kuba"
   DTS:DTSID="{3EBEE135-B45B-4CFD-8F5C-DC8AEFF5B91E}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LastModifiedProductVersion="14.0.0800.90"
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL DimAirport"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{BC378DE8-D652-4AE7-BE01-C793704DE092}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{3559CB5A-F306-44FC-9EE6-FEFEDD8C2263}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -132,11 +132,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\DEST DimAirport"
+              refId="Package\Data Flow Task\DimAirport"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="DEST DimAirport"
+              name="DimAirport"
               usesDispositions="true"
               version="4">
               <properties>
@@ -189,7 +189,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\DEST DimAirport.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\DimAirport.Connections[OleDbConnection]"
                   connectionManagerID="{5540D73A-FE74-49B3-836C-6122B58C6C25}:external"
                   connectionManagerRefId="Project.ConnectionManagers[WAREHOUSE]"
                   description="The OLE DB runtime connection used to access the database."
@@ -197,119 +197,119 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].Columns[&quot;iata&quot;]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].Columns[iata]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="6"
-                      cachedName="&quot;iata&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[IATA]"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;iata&quot;]" />
+                      cachedLength="50"
+                      cachedName="iata"
+                      externalMetadataColumnId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[IATA]"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[iata]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].Columns[&quot;lat&quot;]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].Columns[city]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="14"
-                      cachedName="&quot;lat&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;lat&quot;]" />
+                      cachedLength="50"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[city]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].Columns[&quot;long&quot;]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].Columns[state]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="14"
-                      cachedName="&quot;long&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;long&quot;]" />
+                      cachedLength="50"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[state]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].Columns[&quot;country&quot;]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].Columns[country]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="&quot;country&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;country&quot;]" />
+                      cachedLength="50"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[country]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].Columns[&quot;state&quot;]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].Columns[airport]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="4"
-                      cachedName="&quot;state&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[State]"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;state&quot;]" />
+                      cachedLength="50"
+                      cachedName="airport"
+                      externalMetadataColumnId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[airport]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].Columns[&quot;city&quot;]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].Columns[lat]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="&quot;city&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;city&quot;]" />
+                      cachedLength="50"
+                      cachedName="lat"
+                      externalMetadataColumnId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[lat]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].Columns[&quot;airport&quot;]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].Columns[long]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="33"
-                      cachedName="&quot;airport&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;airport&quot;]" />
+                      cachedLength="50"
+                      cachedName="long"
+                      externalMetadataColumnId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[long]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[AirportKey]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[AirportKey]"
                       dataType="i4"
                       name="AirportKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[IATA]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[IATA]"
                       codePage="1250"
                       dataType="str"
-                      length="16"
+                      length="50"
                       name="IATA" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       codePage="1250"
                       dataType="str"
                       length="128"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[State]"
                       codePage="1250"
                       dataType="str"
                       length="64"
                       name="State" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[City]"
                       codePage="1250"
                       dataType="str"
                       length="128"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
                       codePage="1250"
                       dataType="str"
                       length="64"
                       name="Country" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       dataType="numeric"
                       name="Latitude"
-                      precision="14"
-                      scale="10" />
+                      precision="16"
+                      scale="12" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       dataType="numeric"
                       name="Longitude"
-                      precision="14"
-                      scale="10" />
+                      precision="16"
+                      scale="12" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[PositionString]"
+                      refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[PositionString]"
                       codePage="1250"
                       dataType="str"
                       length="84"
@@ -319,22 +319,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\DEST DimAirport.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task\DimAirport.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\DimAirport.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\DEST DimAirport.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\DimAirport.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\DEST DimAirport.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\DimAirport.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\DEST DimAirport.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\DimAirport.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -364,7 +364,7 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\FFS Airport.Connections[FlatFileConnection]"
-                  connectionManagerID="{C0920A53-4092-4E2C-9F78-682D4FB98970}:external"
+                  connectionManagerID="{E7598287-6E87-4158-92F6-96DFC09419AF}:external"
                   connectionManagerRefId="Project.ConnectionManagers[CSV Airport]"
                   name="FlatFileConnection" />
               </connections>
@@ -374,16 +374,16 @@
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;iata&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[iata]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;iata&quot;]"
-                      length="6"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;iata&quot;]"
-                      name="&quot;iata&quot;"
-                      truncationRowDisposition="IgnoreFailure">
+                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[iata]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[iata]"
+                      name="iata"
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -396,16 +396,16 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;airport&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[airport]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;airport&quot;]"
-                      length="33"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;airport&quot;]"
-                      name="&quot;airport&quot;"
-                      truncationRowDisposition="IgnoreFailure">
+                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[airport]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[airport]"
+                      name="airport"
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -418,16 +418,16 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;city&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[city]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;city&quot;]"
-                      length="30"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;city&quot;]"
-                      name="&quot;city&quot;"
-                      truncationRowDisposition="IgnoreFailure">
+                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -440,16 +440,16 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;state&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[state]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;state&quot;]"
-                      length="4"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;state&quot;]"
-                      name="&quot;state&quot;"
-                      truncationRowDisposition="IgnoreFailure">
+                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[state]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -462,16 +462,16 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;country&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[country]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;country&quot;]"
-                      length="5"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;country&quot;]"
-                      name="&quot;country&quot;"
-                      truncationRowDisposition="IgnoreFailure">
+                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[country]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -484,16 +484,16 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;lat&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[lat]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;lat&quot;]"
-                      length="14"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;lat&quot;]"
-                      name="&quot;lat&quot;"
-                      truncationRowDisposition="IgnoreFailure">
+                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[lat]"
+                      name="lat"
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -506,16 +506,16 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;long&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[long]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;long&quot;]"
-                      length="14"
-                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[&quot;long&quot;]"
-                      name="&quot;long&quot;"
-                      truncationRowDisposition="IgnoreFailure">
+                      externalMetadataColumnId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[long]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].Columns[long]"
+                      name="long"
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -531,47 +531,47 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;iata&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[iata]"
                       codePage="1250"
                       dataType="str"
-                      length="6"
-                      name="&quot;iata&quot;" />
+                      length="50"
+                      name="iata" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;airport&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[airport]"
                       codePage="1250"
                       dataType="str"
-                      length="33"
-                      name="&quot;airport&quot;" />
+                      length="50"
+                      name="airport" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;city&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[city]"
                       codePage="1250"
                       dataType="str"
-                      length="30"
-                      name="&quot;city&quot;" />
+                      length="50"
+                      name="city" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;state&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[state]"
                       codePage="1250"
                       dataType="str"
-                      length="4"
-                      name="&quot;state&quot;" />
+                      length="50"
+                      name="state" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;country&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[country]"
                       codePage="1250"
                       dataType="str"
-                      length="5"
-                      name="&quot;country&quot;" />
+                      length="50"
+                      name="country" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;lat&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[lat]"
                       codePage="1250"
                       dataType="str"
-                      length="14"
-                      name="&quot;lat&quot;" />
+                      length="50"
+                      name="lat" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[&quot;long&quot;]"
+                      refId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output].ExternalColumns[long]"
                       codePage="1250"
                       dataType="str"
-                      length="14"
-                      name="&quot;long&quot;" />
+                      length="50"
+                      name="long" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -607,7 +607,7 @@
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\DEST DimAirport.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\FFS Airport.Outputs[Flat File Source Output]" />
           </paths>
@@ -655,13 +655,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="130.4,41.6"
-          Id="Package\Exec Trunc"
-          TopLeft="69.1428583203531,44.6588241557349" />
-        <NodeLayout
-          Size="150.4,41.6"
+          Size="150,42"
           Id="Package\Data Flow Task"
           TopLeft="50.2857151420749,143.764707898599" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Exec Trunc"
+          TopLeft="69.1428583203531,44.6588241557349" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="134.342858320353,86.2588241557349">
@@ -705,27 +705,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="130.4,41.6"
+          Size="130,42"
           Id="Package\Data Flow Task\FFS Airport"
           TopLeft="49.714286560915,40.3764711545" />
         <NodeLayout
-          Size="157.6,41.6"
-          Id="Package\Data Flow Task\DEST DimAirport"
-          TopLeft="33.7142862884366,154.964708044455" />
+          Size="131,42"
+          Id="Package\Data Flow Task\DimAirport"
+          TopLeft="73,212" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="113.714286424676,81.9764711545">
+          TopLeft="114.714286560915,82.3764711545">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,72.9882368899547"
+              EndConnector="23.785713439085,129.6235288455"
               Start="0,0"
-              End="0,65.4882368899547">
+              End="23.785713439085,122.1235288455">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,65.4882368899547" />
+                    End="0,60.81176442275" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,60.81176442275"
+                    Point2="0,64.81176442275"
+                    Point3="4,64.81176442275" />
+                  <mssgle:LineSegment
+                    End="19.785713439085,64.81176442275" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.785713439085,64.81176442275"
+                    Point2="23.785713439085,64.81176442275"
+                    Point3="23.785713439085,68.81176442275" />
+                  <mssgle:LineSegment
+                    End="23.785713439085,122.1235288455" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -738,7 +750,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\DEST DimAirport">
+    design-time-name="Package\Data Flow Task\DimAirport">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

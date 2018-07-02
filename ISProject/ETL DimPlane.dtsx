@@ -11,12 +11,728 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL DimPlane"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{EFCC5200-2210-408F-8251-C75F0CEDD063}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{214BDE91-B268-4693-A8A0-BA229D0EB928}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D3D31836-5172-4237-A3D2-C1732393B52D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[issue_date]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="issue_date"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[year]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="year"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[issue_date_as_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[issue_date_as_date]"
+                      name="issue_date_as_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]})) == "" ? NULL(DT_WSTR,50) : ([SUBSTRING](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4,2) + "-" + [LEFT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},2) + "-" + [RIGHT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(issue_date)) == "" ? NULL(DT_WSTR,50) : (SUBSTRING(issue_date,4,2) + "-" + LEFT(issue_date,2) + "-" + RIGHT(issue_date,4))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[year_as_int]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[year_as_int]"
+                      name="year_as_int"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LOWER](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]}) == "none" ? "-1" : #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LOWER(year) == "none" ? "-1" : year</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\DimPlane"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DimPlane"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimPlane]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\DimPlane.Connections[OleDbConnection]"
+                  connectionManagerID="{5540D73A-FE74-49B3-836C-6122B58C6C25}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[WAREHOUSE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[tailnum]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="tailnum"
+                      externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[TailNum]"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[tailnum]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[type]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="64"
+                      cachedName="type"
+                      externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[manufacturer]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="manufacturer"
+                      externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Manufacturer]"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[manufacturer]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[model]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="model"
+                      externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Model]"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[model]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[status]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="status"
+                      externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[status]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[aircraft_type]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="64"
+                      cachedName="aircraft_type"
+                      externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[AircraftType]"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[aircraft_type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[engine_type]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="engine_type"
+                      externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[EngineType]"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[engine_type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[issue_date_as_date]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="issue_date_as_date"
+                      externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[IssueDate]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[issue_date_as_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[year_as_int]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="year_as_int"
+                      externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[year_as_int]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[PlaneKey]"
+                      dataType="i4"
+                      name="PlaneKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[TailNum]"
+                      codePage="1250"
+                      dataType="str"
+                      length="16"
+                      name="TailNum" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      codePage="1250"
+                      dataType="str"
+                      length="64"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Manufacturer]"
+                      codePage="1250"
+                      dataType="str"
+                      length="32"
+                      name="Manufacturer" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[IssueDate]"
+                      dataType="dbTimeStamp2"
+                      name="IssueDate"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Model]"
+                      codePage="1250"
+                      dataType="str"
+                      length="32"
+                      name="Model" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      codePage="1250"
+                      dataType="str"
+                      length="32"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[AircraftType]"
+                      codePage="1250"
+                      dataType="str"
+                      length="64"
+                      name="AircraftType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[EngineType]"
+                      codePage="1250"
+                      dataType="str"
+                      length="32"
+                      name="EngineType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DimPlane.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DimPlane.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DimPlane.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DimPlane.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DimPlane.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\FFS CSV Plane"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="FFS CSV Plane"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\FFS CSV Plane.Connections[FlatFileConnection]"
+                  connectionManagerID="{7BE4B21A-CA37-4B22-82B8-2F7904528AA5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CSV Plane]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[tailnum]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[tailnum]"
+                      length="16"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[tailnum]"
+                      name="tailnum"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[type]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      length="64"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[type]"
+                      name="type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[manufacturer]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[manufacturer]"
+                      length="32"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[manufacturer]"
+                      name="manufacturer"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[issue_date]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]"
+                      name="issue_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[model]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[model]"
+                      length="32"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[model]"
+                      name="model"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[status]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[status]"
+                      length="32"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[status]"
+                      name="status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[aircraft_type]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[aircraft_type]"
+                      length="64"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[aircraft_type]"
+                      name="aircraft_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[engine_type]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[engine_type]"
+                      length="32"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[engine_type]"
+                      name="engine_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[year]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]"
+                      name="year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[tailnum]"
+                      codePage="1250"
+                      dataType="str"
+                      length="16"
+                      name="tailnum" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      codePage="1250"
+                      dataType="str"
+                      length="64"
+                      name="type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[manufacturer]"
+                      codePage="1250"
+                      dataType="str"
+                      length="32"
+                      name="manufacturer" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[issue_date]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="issue_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[model]"
+                      codePage="1250"
+                      dataType="str"
+                      length="32"
+                      name="model" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[status]"
+                      codePage="1250"
+                      dataType="str"
+                      length="32"
+                      name="status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[aircraft_type]"
+                      codePage="1250"
+                      dataType="str"
+                      length="64"
+                      name="aircraft_type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[engine_type]"
+                      codePage="1250"
+                      dataType="str"
+                      length="32"
+                      name="engine_type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].ExternalColumns[year]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="year" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute Trunc"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E8408566-1723-4F26-B811-9D0EC0CBDA35}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Trunc"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5540D73A-FE74-49B3-836C-6122B58C6C25}"
+          SQLTask:SqlStatementSource="Truncate Table DimPlane" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4DE4EA1F-6220-4E4B-B9DB-561C4B44565D}"
+      DTS:From="Package\Execute Trunc"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -24,5 +740,158 @@
 <Objects
   Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Execute Trunc"
+          TopLeft="135,123" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="169,265" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="210,165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="36.5,100"
+              Start="0,0"
+              End="36.5,92.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46"
+                    Point2="0,50"
+                    Point3="4,50" />
+                  <mssgle:LineSegment
+                    End="32.5,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.5,50"
+                    Point2="36.5,50"
+                    Point3="36.5,54" />
+                  <mssgle:LineSegment
+                    End="36.5,92.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task\FFS CSV Plane"
+          TopLeft="234,107" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Data Flow Task\DimPlane"
+          TopLeft="74,424" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="222,291" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="312,149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11,142"
+              Start="0,0"
+              End="-11,134.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,67"
+                    Point2="0,71"
+                    Point3="-4,71" />
+                  <mssgle:LineSegment
+                    End="-7,71" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7,71"
+                    Point2="-11,71"
+                    Point3="-11,75" />
+                  <mssgle:LineSegment
+                    End="-11,134.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="301,333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-163.5,91"
+              Start="0,0"
+              End="-163.5,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.5"
+                    Point2="0,45.5"
+                    Point3="-4,45.5" />
+                  <mssgle:LineSegment
+                    End="-159.5,45.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-159.5,45.5"
+                    Point2="-163.5,45.5"
+                    Point3="-163.5,49.5" />
+                  <mssgle:LineSegment
+                    End="-163.5,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-89.75,50.5,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DimPlane">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
