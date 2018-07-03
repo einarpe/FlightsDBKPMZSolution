@@ -7,12 +7,12 @@
   DTS:CreatorName="PERSEI8\kuba"
   DTS:DTSID="{950B6DA5-C161-49E4-BFCE-C82586FE9248}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LastModifiedProductVersion="14.0.0800.90"
   DTS:LocaleID="1045"
   DTS:ObjectName="Master"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{0A092B55-2752-44DF-9351-E3F0628A7E71}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{29914D8A-335A-4BC0-87BA-EB91BDF9E30E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -52,6 +52,23 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\EPT ETL DimPlane"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{C2180B8B-1627-4277-95E2-B9631A9C6C0F}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EPT ETL DimPlane"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>ETL DimPlane.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Foreach Loop Container"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
@@ -72,6 +89,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\EPT ETL DimAirport" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{79DBBAAA-969F-49FB-86E7-F0AFC86C263A}"
+      DTS:From="Package\EPT ETL DimAirport"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\EPT ETL DimPlane" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -84,25 +109,25 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\EPT ETL DimAirport"
+          TopLeft="397.457147333573,254.941177011114" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\EPT ETL DimCarrier"
+          TopLeft="395.64286050018,176.394115673712" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="228.8,180"
-          Size="228.8,223.2"
+          PanelSize="229,180"
+          Size="229,223"
           Id="Package\Foreach Loop Container"
           TopLeft="13.1428573666787,107.058825030871" />
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\EPT ETL DimCarrier"
-          TopLeft="262.64286050018,30.394115673712" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\EPT ETL DimAirport"
-          TopLeft="264.457147333573,108.941177011114" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="351.350003916877,71.994115673712">
+          TopLeft="484.350003916877,217.994115673712">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -114,6 +139,32 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,29.4470613374017" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174,42"
+          Id="Package\EPT ETL DimPlane"
+          TopLeft="391,351" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="480.478573666786,296.941177011114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.058822988886"
+              Start="0,0"
+              End="0,46.558822988886">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.558822988886" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

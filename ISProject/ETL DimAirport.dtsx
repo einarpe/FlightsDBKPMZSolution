@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL DimAirport"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{3559CB5A-F306-44FC-9EE6-FEFEDD8C2263}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{FFBCC0D5-0BA1-427A-978D-11FBEF2DBFC0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -300,14 +300,14 @@
                       refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       dataType="numeric"
                       name="Latitude"
-                      precision="16"
-                      scale="12" />
+                      precision="14"
+                      scale="10" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       dataType="numeric"
                       name="Longitude"
-                      precision="16"
-                      scale="12" />
+                      precision="14"
+                      scale="10" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\DimAirport.Inputs[OLE DB Destination Input].ExternalColumns[PositionString]"
                       codePage="1250"
@@ -705,13 +705,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="130,42"
-          Id="Package\Data Flow Task\FFS Airport"
-          TopLeft="49.714286560915,40.3764711545" />
-        <NodeLayout
           Size="131,42"
           Id="Package\Data Flow Task\DimAirport"
           TopLeft="73,212" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task\FFS Airport"
+          TopLeft="49.714286560915,40.3764711545" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="114.714286560915,82.3764711545">

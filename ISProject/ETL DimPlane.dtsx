@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL DimPlane"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{214BDE91-B268-4693-A8A0-BA229D0EB928}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{A9DB34F2-753A-4DE4-A5F0-340393B9FD2A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -72,25 +72,26 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[issue_date_as_date]"
-                      dataType="wstr"
+                      codePage="1250"
+                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="50"
+                      length="10"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[issue_date_as_date]"
                       name="issue_date_as_date"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LTRIM]([RTRIM](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]})) == "" ? NULL(DT_WSTR,50) : ([SUBSTRING](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4,2) + "-" + [LEFT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},2) + "-" + [RIGHT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4))</property>
+                          name="Expression">(DT_STR,10,1250)(#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]} == "" || #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]} == "None" ? "1900-01-01" : ([RIGHT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4) + "-" + [LEFT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},2) + "-" + [SUBSTRING](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4,2)))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">LTRIM(RTRIM(issue_date)) == "" ? NULL(DT_WSTR,50) : (SUBSTRING(issue_date,4,2) + "-" + LEFT(issue_date,2) + "-" + RIGHT(issue_date,4))</property>
+                          name="FriendlyExpression">(DT_STR,10,1250)(issue_date == "" || issue_date == "None" ? "1900-01-01" : (RIGHT(issue_date,4) + "-" + LEFT(issue_date,2) + "-" + SUBSTRING(issue_date,4,2)))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -107,13 +108,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LOWER](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]}) == "none" ? "-1" : #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]}</property>
+                          name="Expression">([LOWER](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]}) == "none" || #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]} == "") ? "-1" : #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">LOWER(year) == "none" ? "-1" : year</property>
+                          name="FriendlyExpression">(LOWER(year) == "none" || year == "") ? "-1" : year</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -274,8 +275,9 @@
                       lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[engine_type]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[issue_date_as_date]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
                       cachedName="issue_date_as_date"
                       externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[IssueDate]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[issue_date_as_date]" />
@@ -313,9 +315,8 @@
                       name="Manufacturer" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[IssueDate]"
-                      dataType="dbTimeStamp2"
-                      name="IssueDate"
-                      scale="7" />
+                      dataType="dbDate"
+                      name="IssueDate" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[Model]"
                       codePage="1250"
@@ -746,13 +747,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Execute Trunc"
-          TopLeft="135,123" />
-        <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
           TopLeft="169,265" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Execute Trunc"
+          TopLeft="135,123" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="210,165">
@@ -794,7 +795,7 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task\FFS CSV Plane"
@@ -802,11 +803,45 @@
         <NodeLayout
           Size="127,42"
           Id="Package\Data Flow Task\DimPlane"
-          TopLeft="74,424" />
+          TopLeft="198,453" />
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="222,291" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="301,333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-39.5,120"
+              Start="0,0"
+              End="-39.5,112.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56"
+                    Point2="0,60"
+                    Point3="-4,60" />
+                  <mssgle:LineSegment
+                    End="-35.5,60" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.5,60"
+                    Point2="-39.5,60"
+                    Point3="-39.5,64" />
+                  <mssgle:LineSegment
+                    End="-39.5,112.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="312,149">
@@ -839,42 +874,6 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="301,333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-163.5,91"
-              Start="0,0"
-              End="-163.5,83.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,41.5"
-                    Point2="0,45.5"
-                    Point3="-4,45.5" />
-                  <mssgle:LineSegment
-                    End="-159.5,45.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-159.5,45.5"
-                    Point2="-163.5,45.5"
-                    Point3="-163.5,49.5" />
-                  <mssgle:LineSegment
-                    End="-163.5,83.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-89.75,50.5,16,16"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
