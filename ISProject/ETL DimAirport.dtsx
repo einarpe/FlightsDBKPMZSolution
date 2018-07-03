@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL DimAirport"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{39B7D950-3D32-4BEB-87EE-125DB17DDC23}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{58EF2B58-DA4A-45E2-9179-DBB20FA0CBF8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
