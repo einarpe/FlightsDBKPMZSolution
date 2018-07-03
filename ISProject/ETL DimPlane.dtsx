@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL DimPlane"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{A9DB34F2-753A-4DE4-A5F0-340393B9FD2A}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{C02670B7-AD18-46D8-AB76-E768C572121C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -58,6 +58,156 @@
                       cachedLength="10"
                       cachedName="year"
                       lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[type]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="64"
+                      cachedName="type"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[type]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[type]})) == "" ? "N/A" : #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[type]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(type)) == "" ? "N/A" : type</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[manufacturer]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="manufacturer"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[manufacturer]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[manufacturer]})) == "" ? "N/A" : #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[manufacturer]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(manufacturer)) == "" ? "N/A" : manufacturer</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[model]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="model"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[model]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[model]})) == "" ? "N/A" : #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[model]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(model)) == "" ? "N/A" : model</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[status]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="status"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[status]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[status]})) == "" ? "N/A" : #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[status]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(status)) == "" ? "N/A" : status</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[aircraft_type]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="64"
+                      cachedName="aircraft_type"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[aircraft_type]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[aircraft_type]})) == "" ? "N/A" : #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[aircraft_type]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(aircraft_type)) == "" ? "N/A" : aircraft_type</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[engine_type]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="engine_type"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[engine_type]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[LTRIM]([RTRIM](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[engine_type]})) == "" ? "N/A" : #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[engine_type]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LTRIM(RTRIM(engine_type)) == "" ? "N/A" : engine_type</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -72,8 +222,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[issue_date_as_date]"
-                      codePage="1250"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="10"
@@ -85,13 +234,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,10,1250)(#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]} == "" || #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]} == "None" ? "1900-01-01" : ([RIGHT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4) + "-" + [LEFT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},2) + "-" + [SUBSTRING](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4,2)))</property>
+                          name="Expression">(#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]} == "" || #{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]} == "None" ? "1900-01-01" : ([RIGHT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4) + "-" + [LEFT](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},2) + "-" + [SUBSTRING](#{Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[issue_date]},4,2)))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,10,1250)(issue_date == "" || issue_date == "None" ? "1900-01-01" : (RIGHT(issue_date,4) + "-" + LEFT(issue_date,2) + "-" + SUBSTRING(issue_date,4,2)))</property>
+                          name="FriendlyExpression">(issue_date == "" || issue_date == "None" ? "1900-01-01" : (RIGHT(issue_date,4) + "-" + LEFT(issue_date,2) + "-" + SUBSTRING(issue_date,4,2)))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -275,8 +424,7 @@
                       lineageId="Package\Data Flow Task\FFS CSV Plane.Outputs[Flat File Source Output].Columns[engine_type]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].Columns[issue_date_as_date]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="issue_date_as_date"
                       externalMetadataColumnId="Package\Data Flow Task\DimPlane.Inputs[OLE DB Destination Input].ExternalColumns[IssueDate]"
@@ -749,37 +897,25 @@
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
-          TopLeft="169,265" />
+          TopLeft="132,269" />
         <NodeLayout
           Size="150,42"
           Id="Package\Execute Trunc"
           TopLeft="135,123" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="210,165">
+          TopLeft="209.75,165">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="36.5,100"
+              EndConnector="0,104"
               Start="0,0"
-              End="36.5,92.5">
+              End="0,96.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46"
-                    Point2="0,50"
-                    Point3="4,50" />
-                  <mssgle:LineSegment
-                    End="32.5,50" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.5,50"
-                    Point2="36.5,50"
-                    Point3="36.5,54" />
-                  <mssgle:LineSegment
-                    End="36.5,92.5" />
+                    End="0,96.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -799,41 +935,29 @@
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task\FFS CSV Plane"
-          TopLeft="234,107" />
+          TopLeft="222,107" />
         <NodeLayout
           Size="127,42"
           Id="Package\Data Flow Task\DimPlane"
-          TopLeft="198,453" />
+          TopLeft="232,456" />
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="222,291" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="301,333">
+          TopLeft="298.25,333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-39.5,120"
+              EndConnector="0,123"
               Start="0,0"
-              End="-39.5,112.5">
+              End="0,115.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,56"
-                    Point2="0,60"
-                    Point3="-4,60" />
-                  <mssgle:LineSegment
-                    End="-35.5,60" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-35.5,60"
-                    Point2="-39.5,60"
-                    Point3="-39.5,64" />
-                  <mssgle:LineSegment
-                    End="-39.5,112.5" />
+                    End="0,115.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -844,30 +968,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="312,149">
+          TopLeft="300.5,149">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-11,142"
+              EndConnector="0,142"
               Start="0,0"
-              End="-11,134.5">
+              End="0,134.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,67"
-                    Point2="0,71"
-                    Point3="-4,71" />
-                  <mssgle:LineSegment
-                    End="-7,71" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7,71"
-                    Point2="-11,71"
-                    Point3="-11,75" />
-                  <mssgle:LineSegment
-                    End="-11,134.5" />
+                    End="0,134.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

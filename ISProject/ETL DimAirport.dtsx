@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL DimAirport"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{FFBCC0D5-0BA1-427A-978D-11FBEF2DBFC0}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{39B7D950-3D32-4BEB-87EE-125DB17DDC23}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -657,37 +657,25 @@
         <NodeLayout
           Size="150,42"
           Id="Package\Data Flow Task"
-          TopLeft="50.2857151420749,143.764707898599" />
+          TopLeft="58.2857151420749,143.764707898599" />
         <NodeLayout
           Size="130,42"
           Id="Package\Exec Trunc"
           TopLeft="69.1428583203531,44.6588241557349" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="134.342858320353,86.2588241557349">
+          TopLeft="133.714286731214,86.6588241557349">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.85714317827816,57.5058837428638"
+              EndConnector="0,57.1058837428641"
               Start="0,0"
-              End="-8.85714317827816,50.0058837428638">
+              End="0,49.6058837428641">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.7529418714319" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.7529418714319"
-                    Point2="0,28.7529418714319"
-                    Point3="-4,28.7529418714319" />
-                  <mssgle:LineSegment
-                    End="-4.85714317827816,28.7529418714319" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.85714317827816,28.7529418714319"
-                    Point2="-8.85714317827816,28.7529418714319"
-                    Point3="-8.85714317827816,32.7529418714319" />
-                  <mssgle:LineSegment
-                    End="-8.85714317827816,50.0058837428638" />
+                    End="0,49.6058837428641" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -707,37 +695,25 @@
         <NodeLayout
           Size="131,42"
           Id="Package\Data Flow Task\DimAirport"
-          TopLeft="73,212" />
+          TopLeft="53,210" />
         <NodeLayout
           Size="130,42"
           Id="Package\Data Flow Task\FFS Airport"
           TopLeft="49.714286560915,40.3764711545" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="114.714286560915,82.3764711545">
+          TopLeft="116.607143280458,82.3764711545">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="23.785713439085,129.6235288455"
+              EndConnector="0,127.6235288455"
               Start="0,0"
-              End="23.785713439085,122.1235288455">
+              End="0,120.1235288455">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.81176442275" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,60.81176442275"
-                    Point2="0,64.81176442275"
-                    Point3="4,64.81176442275" />
-                  <mssgle:LineSegment
-                    End="19.785713439085,64.81176442275" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.785713439085,64.81176442275"
-                    Point2="23.785713439085,64.81176442275"
-                    Point3="23.785713439085,68.81176442275" />
-                  <mssgle:LineSegment
-                    End="23.785713439085,122.1235288455" />
+                    End="0,120.1235288455" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
