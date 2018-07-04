@@ -13,7 +13,7 @@
       DTS:DataRowsToSkip="300"
       DTS:TextQualifier="_x0022_"
       DTS:CodePage="1250"
-      DTS:ConnectionString="C:\Studia\DataWarehouse\FlightsDBKPMZSolution\CSVData\carriers.csv">
+      DTS:ConnectionString="D:\Studia\HurtownieDanych\FlightsDBKPMZSolution\CSVData\carriers.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -22,7 +22,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Code"
-          DTS:DTSID="{A0040EF6-265A-4358-B8FD-466705C9728E}"
+          DTS:DTSID="{986976D2-1095-41BA-A0AF-E5150E2E2E5C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -31,7 +31,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Description"
-          DTS:DTSID="{43EFEF85-EB1C-4023-92FE-44BE2452DDAC}"
+          DTS:DTSID="{6B0DFCFB-2E15-4DB2-A843-EC5004BA742F}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

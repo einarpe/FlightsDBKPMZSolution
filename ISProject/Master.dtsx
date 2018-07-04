@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Master"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{35F30095-EECC-4E50-9402-10659A57D2F8}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{D7749672-DE95-4340-820C-AB72BD7A1C96}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -78,6 +78,40 @@
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Copy Dimension Data\ExecProc FillUpDimDate"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{92B12C12-0E1A-4F32-BE04-EB2ACEFBD8F9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ExecProc FillUpDimDate"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5540D73A-FE74-49B3-836C-6122B58C6C25}"
+              SQLTask:SqlStatementSource="exec fillUpDimDate" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Copy Dimension Data\ExecProc UnknownMembers"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C3366E2C-372A-4A12-903C-504D550D4C30}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ExecProc UnknownMembers"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5540D73A-FE74-49B3-836C-6122B58C6C25}"
+              SQLTask:SqlStatementSource="exec fillUpDimUnknownMembers" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
@@ -96,6 +130,22 @@
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
           DTS:To="Package\Copy Dimension Data\EPT ETL DimPlane" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Copy Dimension Data.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{381D0386-2871-46B2-9D32-AF4063903483}"
+          DTS:From="Package\Copy Dimension Data\ExecProc FillUpDimDate"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Copy Dimension Data\EPT ETL DimCarrier" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Copy Dimension Data.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{4FE5F2AD-E3DC-44D0-AB44-C2ABA9F2782B}"
+          DTS:From="Package\Copy Dimension Data\EPT ETL DimPlane"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Copy Dimension Data\ExecProc UnknownMembers" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
@@ -110,14 +160,22 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\Copy Dimension Data\EPT ETL DimAirport"
-          TopLeft="55.4571473335729,112.547061337402" />
+          TopLeft="53.4571473335729,167.547061337402" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Copy Dimension Data\EPT ETL DimCarrier"
+          TopLeft="51.6428605001801,89" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Copy Dimension Data\EPT ETL DimPlane"
+          TopLeft="47,263.605884326288" />
         <EdgeLayout
           Id="Package\Copy Dimension Data.PrecedenceConstraints[Constraint]"
-          TopLeft="142.350003916877,75.6">
+          TopLeft="140.350003916877,130.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -139,7 +197,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Copy Dimension Data.PrecedenceConstraints[Constraint 1]"
-          TopLeft="138.478573666786,154.547061337402">
+          TopLeft="136.478573666786,209.547061337402">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -160,20 +218,64 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="180,42"
-          Id="Package\Copy Dimension Data\EPT ETL DimCarrier"
-          TopLeft="53.6428605001801,34" />
+          Size="221,42"
+          Id="Package\Copy Dimension Data\ExecProc UnknownMembers"
+          TopLeft="29,350" />
         <NodeLayout
-          Size="174,42"
-          Id="Package\Copy Dimension Data\EPT ETL DimPlane"
-          TopLeft="49,208.605884326288" />
+          Size="200,42"
+          Id="Package\Copy Dimension Data\ExecProc FillUpDimDate"
+          TopLeft="46,9" />
+        <EdgeLayout
+          Id="Package\Copy Dimension Data.PrecedenceConstraints[Constraint 2]"
+          TopLeft="143.82143025009,51">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Copy Dimension Data.PrecedenceConstraints[Constraint 3]"
+          TopLeft="136.75,305.605884326288">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.394115673712"
+              Start="0,0"
+              End="0,36.894115673712">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.894115673712" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="263,306"
-          Size="263,349"
+          PanelSize="312,455"
+          Size="312,498"
           Id="Package\Copy Dimension Data"
-          TopLeft="373,118" />
+          TopLeft="76,38" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

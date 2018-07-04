@@ -17,81 +17,82 @@
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="6"
+          DTS:MaximumWidth="16"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="tailnum"
-          DTS:DTSID="{F88D5E00-83ED-4F57-8997-CAFDC1909E07}"
+          DTS:DTSID="{0793CCC0-6B02-40D6-A1EF-621EE0D3901A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="11"
+          DTS:MaximumWidth="64"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="type"
-          DTS:DTSID="{E18ABE9B-0B32-4668-8AD8-E298DCC6804F}"
+          DTS:DTSID="{88B90634-E131-445E-B593-DFA3A817B44A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="17"
+          DTS:MaximumWidth="32"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="manufacturer"
-          DTS:DTSID="{6393C25B-1BD6-4D44-B04D-9E10D5094F08}"
+          DTS:DTSID="{5C5B9694-C71D-4AB1-9794-5AFC0805146D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:DataType="7"
+          DTS:MaximumWidth="10"
+          DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="issue_date"
-          DTS:DTSID="{94E74C03-FDCC-4301-90C8-E67EA60127C5}"
+          DTS:DTSID="{A667BEA2-0200-415D-944B-8751EDB62EF6}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="9"
+          DTS:MaximumWidth="32"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="model"
-          DTS:DTSID="{50B5A25B-4457-4CCE-80FE-D543569F25B1}"
+          DTS:DTSID="{9DA6DCEE-B137-4DA4-8FF1-AFF4F0C369DD}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="5"
+          DTS:MaximumWidth="32"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="status"
-          DTS:DTSID="{E35D7253-A860-47FA-80CB-9A806C995BEC}"
+          DTS:DTSID="{0E8E7C19-10AE-4DF3-A130-E299801FE22D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="23"
+          DTS:MaximumWidth="64"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="aircraft_type"
-          DTS:DTSID="{CE363B00-C434-45D2-888F-3CF8D49A3DDB}"
+          DTS:DTSID="{AF9299E4-0759-49EC-86C0-F741996DFAE3}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="9"
+          DTS:MaximumWidth="32"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="engine_type"
-          DTS:DTSID="{7F576AEE-B477-4956-8B8C-7DE3905AC768}"
+          DTS:DTSID="{B3B5E9A9-B96F-4727-ADCF-867E7995C837}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x000A_"
-          DTS:DataType="3"
-          DTS:TextQualified="True"
+          DTS:MaximumWidth="10"
+          DTS:DataType="129"
           DTS:ObjectName="year"
-          DTS:DTSID="{60B28FBA-44CD-4DF7-B266-3107F68DC9FC}"
+          DTS:DTSID="{D6342C1C-2220-44C6-A795-46F18AA1988B}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>
