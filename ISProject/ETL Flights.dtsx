@@ -1,0 +1,1378 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/7/2018 10:12:51 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PERSEI8"
+  DTS:CreatorName="PERSEI8\kuba"
+  DTS:DTSID="{2AF37416-3DF4-425E-A83C-C30DD41E2645}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="ETL Flights"
+  DTS:PackageType="5"
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{7FEF2459-01CF-4AC5-A2A3-0B049CB3B029}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV Local _Flights_]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6D96A91E-0BF1-4069-84EC-E8765A122962}"
+      DTS:ObjectName="CSV Local _Flights_">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::fileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{8584A0CE-04D3-4124-B09A-D74C86C550D6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Month"
+              DTS:DTSID="{2CCB1D2F-7787-4713-85D6-34F71F1A032F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayofMonth"
+              DTS:DTSID="{4E1DCE3A-67A6-474F-BE0D-F5AD98AC725C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayOfWeek"
+              DTS:DTSID="{FCC74675-AE80-41FC-AB42-AD8361795715}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepTime"
+              DTS:DTSID="{D34D146D-3F19-476F-85FF-D57189D5B52D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CRSDepTime"
+              DTS:DTSID="{A7724534-27DE-43B3-A766-09DACA90781D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ArrTime"
+              DTS:DTSID="{48A84B68-F5C9-4DFD-A0F4-F6872CC5C687}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CRSArrTime"
+              DTS:DTSID="{B5AD884C-7F34-4E46-BF0D-DCB50D28AAAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UniqueCarrier"
+              DTS:DTSID="{82B26F00-6BF1-456E-9B3C-F1EBE449D944}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FlightNum"
+              DTS:DTSID="{BF443898-4127-4BFB-BA63-C4DD52922FAE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TailNum"
+              DTS:DTSID="{C9099AF5-666A-438A-A42B-B0BE61561A0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ActualElapsedTime"
+              DTS:DTSID="{309B8A4F-6D91-4E72-B537-C0B6A585A570}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CRSElapsedTime"
+              DTS:DTSID="{0372EADB-800B-4FC6-A282-9EBED7669B48}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AirTime"
+              DTS:DTSID="{9674181A-B094-4D31-BB2D-BCCA322012D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ArrDelay"
+              DTS:DTSID="{FF019754-B01F-46D3-AF09-482E5E074FB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepDelay"
+              DTS:DTSID="{663345AE-599C-4C65-BD09-02881383949D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Origin"
+              DTS:DTSID="{E2B25B78-FE68-4A27-9C00-78DE8B918412}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="36"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dest"
+              DTS:DTSID="{6E685DFF-00F0-4368-89FB-ED461BF80BC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Distance"
+              DTS:DTSID="{6DEEAE33-B4B7-4CC3-B268-A87813E6C902}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxiIn"
+              DTS:DTSID="{DD898589-8319-4303-B8D7-881666EFE631}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxiOut"
+              DTS:DTSID="{5EE69495-A19D-4AEC-BBBD-8298C0F7872F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cancelled"
+              DTS:DTSID="{F25F500E-9C7B-43AA-B863-E0D939D29F7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CancellationCode"
+              DTS:DTSID="{E7F82891-92D1-40F8-8E82-FB916F5139EA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Diverted"
+              DTS:DTSID="{70FFB382-507B-4DDE-ACA0-8949C4DB93F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CarrierDelay"
+              DTS:DTSID="{67786545-5E2F-4ABF-A40D-DC4756326540}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WeatherDelay"
+              DTS:DTSID="{DD2CDA5E-C2F0-448D-BB14-C6F3510FBC28}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NASDelay"
+              DTS:DTSID="{07B7E224-818C-427C-9459-45BAA4C04AC9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SecurityDelay"
+              DTS:DTSID="{BF13741C-6571-4ADE-9893-FE9DB5EEBFBE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LateAircraftDelay"
+              DTS:DTSID="{E84D07DB-99AA-45EF-BC33-ACE6036DA2AC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{22E3BA55-E50A-47DC-AA0D-BC45A85C7416}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="fileDirectory">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Studia\DataWarehouse\Flights\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FB5886EB-D9C5-459B-96DE-6B5182C36B4E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="fileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D2092A74-BE87-4234-8A03-EAEB0E509B36}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="flightRowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach CSV Flight Files"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{26b9c813-09de-4190-98cf-be39ecfd6be0}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach CSV Flight Files">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{06488869-1cb1-4fe6-982e-d8d4a0ece973}"
+        DTS:ObjectName="{86FD9B7F-F14E-4363-84E1-7DBDA1A5AF8D}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::fileDirectory]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Studia\DataWarehouse\Flights\" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach CSV Flight Files\Data Flow"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{25DC361F-6CAF-41CF-BA8A-D5CB595CC3C2}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1045"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[CSV Local _Flights_]"
+                      connectionManagerRefId="Package.ConnectionManagers[CSV Local _Flights_]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Year]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Year]"
+                          name="Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Month]"
+                          dataType="i1"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Month]"
+                          name="Month"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DayofMonth]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayofMonth]"
+                          length="10"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DayofMonth]"
+                          name="DayofMonth"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DayOfWeek]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayOfWeek]"
+                          length="10"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DayOfWeek]"
+                          name="DayOfWeek"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepTime]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DepTime]"
+                          length="5"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepTime]"
+                          name="DepTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSDepTime]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSDepTime]"
+                          length="5"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSDepTime]"
+                          name="CRSDepTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrTime]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ArrTime]"
+                          length="5"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrTime]"
+                          name="ArrTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSArrTime]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSArrTime]"
+                          length="5"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSArrTime]"
+                          name="CRSArrTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[UniqueCarrier]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UniqueCarrier]"
+                          length="6"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[UniqueCarrier]"
+                          name="UniqueCarrier"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[FlightNum]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FlightNum]"
+                          length="16"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[FlightNum]"
+                          name="FlightNum"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TailNum]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TailNum]"
+                          length="2"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TailNum]"
+                          name="TailNum"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ActualElapsedTime]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ActualElapsedTime]"
+                          length="8"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ActualElapsedTime]"
+                          name="ActualElapsedTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSElapsedTime]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSElapsedTime]"
+                          length="8"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSElapsedTime]"
+                          name="CRSElapsedTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[AirTime]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AirTime]"
+                          length="4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[AirTime]"
+                          name="AirTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ArrDelay]"
+                          length="8"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrDelay]"
+                          name="ArrDelay"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DepDelay]"
+                          length="8"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepDelay]"
+                          name="DepDelay"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Origin]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Origin]"
+                          length="8"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Origin]"
+                          name="Origin"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Dest]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dest]"
+                          length="36"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Dest]"
+                          name="Dest"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Distance]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Distance]"
+                          length="16"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Distance]"
+                          name="Distance"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiIn]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TaxiIn]"
+                          length="6"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiIn]"
+                          name="TaxiIn"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiOut]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TaxiOut]"
+                          length="6"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiOut]"
+                          name="TaxiOut"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Cancelled]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cancelled]"
+                          length="4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Cancelled]"
+                          name="Cancelled"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CancellationCode]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CancellationCode]"
+                          length="4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CancellationCode]"
+                          name="CancellationCode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Diverted]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Diverted]"
+                          length="4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Diverted]"
+                          name="Diverted"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CarrierDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CarrierDelay]"
+                          length="4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CarrierDelay]"
+                          name="CarrierDelay"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[WeatherDelay]"
+                          length="4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherDelay]"
+                          name="WeatherDelay"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[NASDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NASDelay]"
+                          length="4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[NASDelay]"
+                          name="NASDelay"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[SecurityDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SecurityDelay]"
+                          length="4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[SecurityDelay]"
+                          name="SecurityDelay"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[LateAircraftDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LateAircraftDelay]"
+                          length="4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[LateAircraftDelay]"
+                          name="LateAircraftDelay"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          dataType="i2"
+                          name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                          dataType="i1"
+                          name="Month" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayofMonth]"
+                          codePage="1250"
+                          dataType="str"
+                          length="10"
+                          name="DayofMonth" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayOfWeek]"
+                          codePage="1250"
+                          dataType="str"
+                          length="10"
+                          name="DayOfWeek" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DepTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="5"
+                          name="DepTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSDepTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="5"
+                          name="CRSDepTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ArrTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="5"
+                          name="ArrTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSArrTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="5"
+                          name="CRSArrTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UniqueCarrier]"
+                          codePage="1250"
+                          dataType="str"
+                          length="6"
+                          name="UniqueCarrier" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FlightNum]"
+                          codePage="1250"
+                          dataType="str"
+                          length="16"
+                          name="FlightNum" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TailNum]"
+                          codePage="1250"
+                          dataType="str"
+                          length="2"
+                          name="TailNum" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ActualElapsedTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="8"
+                          name="ActualElapsedTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSElapsedTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="8"
+                          name="CRSElapsedTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AirTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="AirTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ArrDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          length="8"
+                          name="ArrDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DepDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          length="8"
+                          name="DepDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Origin]"
+                          codePage="1250"
+                          dataType="str"
+                          length="8"
+                          name="Origin" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dest]"
+                          codePage="1250"
+                          dataType="str"
+                          length="36"
+                          name="Dest" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Distance]"
+                          codePage="1250"
+                          dataType="str"
+                          length="16"
+                          name="Distance" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TaxiIn]"
+                          codePage="1250"
+                          dataType="str"
+                          length="6"
+                          name="TaxiIn" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TaxiOut]"
+                          codePage="1250"
+                          dataType="str"
+                          length="6"
+                          name="TaxiOut" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cancelled]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="Cancelled" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CancellationCode]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="CancellationCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Diverted]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="Diverted" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CarrierDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="CarrierDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[WeatherDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="WeatherDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NASDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="NASDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SecurityDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="SecurityDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LateAircraftDelay]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="LateAircraftDelay" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1250"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach CSV Flight Files\Data Flow\Row Count"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Row Count">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::flightRowCount</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Row Count.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Row Count.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Row Count.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Flat File Source Output]"
+                  endId="Package\Foreach CSV Flight Files\Data Flow\Row Count.Inputs[Row Count Input 1]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{83BE8388-A983-4005-AAB3-ECDDC1A29DA3}"
+          DTS:ObjectName="{83BE8388-A983-4005-AAB3-ECDDC1A29DA3}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::fileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\Foreach CSV Flight Files\Data Flow"
+          TopLeft="121.803180982629,56.4235313088469" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="401.6,220"
+          Size="401.6,263.2"
+          Id="Package\Foreach CSV Flight Files"
+          TopLeft="252.571432872694,55.2941184085134" />
+        <AnnotationLayout
+          Text=""
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="28.8,60"
+          Id="d481185a-f9f4-432a-9150-2b46fe6711e8"
+          TopLeft="786.42858482137,302.882357048741" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach CSV Flight Files\Data Flow">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Row Count"
+          TopLeft="146.4,185.6" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Flat File Source"
+          TopLeft="147.2,43.2" />
+        <EdgeLayout
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Flat File Source Output]"
+          TopLeft="222.4,84.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.2000000000001,100.8"
+              Start="0,0"
+              End="-11.2000000000001,93.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.4"
+                    Point2="0,50.4"
+                    Point3="-4,50.4" />
+                  <mssgle:LineSegment
+                    End="-7.2000000000001,50.4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.2000000000001,50.4"
+                    Point2="-11.2000000000001,50.4"
+                    Point3="-11.2000000000001,54.4" />
+                  <mssgle:LineSegment
+                    End="-11.2000000000001,93.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
