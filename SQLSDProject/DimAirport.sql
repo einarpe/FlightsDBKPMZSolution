@@ -12,3 +12,5 @@
 		concat(Latitude, ', ', Longitude)
 	)
 )
+
+GO

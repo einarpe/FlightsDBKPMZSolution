@@ -1,0 +1,3 @@
+﻿create schema [raporty]
+go
+

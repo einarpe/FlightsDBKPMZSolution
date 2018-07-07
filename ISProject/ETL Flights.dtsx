@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL Flights"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{7FEF2459-01CF-4AC5-A2A3-0B049CB3B029}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{B3D9E7ED-5DA4-4098-AB85-68C6E97CAC5D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Year"
-              DTS:DTSID="{8584A0CE-04D3-4124-B09A-D74C86C550D6}"
+              DTS:DTSID="{4279C091-3AF3-4476-9D68-A1B3A3781B29}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Month"
-              DTS:DTSID="{2CCB1D2F-7787-4713-85D6-34F71F1A032F}"
+              DTS:DTSID="{E44EAAB8-6CC3-41BA-8DC6-0102F3DD2F1F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -56,7 +56,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DayofMonth"
-              DTS:DTSID="{4E1DCE3A-67A6-474F-BE0D-F5AD98AC725C}"
+              DTS:DTSID="{84B3B316-6C62-45A7-A5E4-92ACE38CC10F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,43 +65,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DayOfWeek"
-              DTS:DTSID="{FCC74675-AE80-41FC-AB42-AD8361795715}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="5"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DepTime"
-              DTS:DTSID="{D34D146D-3F19-476F-85FF-D57189D5B52D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="5"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CRSDepTime"
-              DTS:DTSID="{A7724534-27DE-43B3-A766-09DACA90781D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="5"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ArrTime"
-              DTS:DTSID="{48A84B68-F5C9-4DFD-A0F4-F6872CC5C687}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="5"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CRSArrTime"
-              DTS:DTSID="{B5AD884C-7F34-4E46-BF0D-DCB50D28AAAA}"
+              DTS:DTSID="{408CB2DA-CD74-4D4A-9229-01023FA5E84E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -109,8 +73,44 @@
               DTS:MaximumWidth="6"
               DTS:DataType="129"
               DTS:TextQualified="True"
+              DTS:ObjectName="DepTime"
+              DTS:DTSID="{6272FFCA-3592-4B0E-B26C-9E90C9B8D7A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CRSDepTime"
+              DTS:DTSID="{687ABA39-E4E3-465D-9610-8BF7252F834A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ArrTime"
+              DTS:DTSID="{3B4CA167-9CEA-4088-B03B-FCA9279788A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CRSArrTime"
+              DTS:DTSID="{67470841-E81C-4B6B-B78D-12A431957F0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
               DTS:ObjectName="UniqueCarrier"
-              DTS:DTSID="{82B26F00-6BF1-456E-9B3C-F1EBE449D944}"
+              DTS:DTSID="{D56AA12B-0942-4C17-991A-EAE4CA7542F1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,16 +119,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FlightNum"
-              DTS:DTSID="{BF443898-4127-4BFB-BA63-C4DD52922FAE}"
+              DTS:DTSID="{4A4CFD97-CAFC-4A4F-B7F9-7BA91C917247}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="2"
+              DTS:MaximumWidth="16"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TailNum"
-              DTS:DTSID="{C9099AF5-666A-438A-A42B-B0BE61561A0F}"
+              DTS:DTSID="{C432307C-30F5-4166-9EBD-6F227A814362}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -137,7 +137,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ActualElapsedTime"
-              DTS:DTSID="{309B8A4F-6D91-4E72-B537-C0B6A585A570}"
+              DTS:DTSID="{B81C45EB-D86F-42E4-AAD7-173589B5F351}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,16 +146,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CRSElapsedTime"
-              DTS:DTSID="{0372EADB-800B-4FC6-A282-9EBED7669B48}"
+              DTS:DTSID="{76F6300D-262D-42CA-89CA-EBBF4394E1A2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="4"
+              DTS:MaximumWidth="6"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AirTime"
-              DTS:DTSID="{9674181A-B094-4D31-BB2D-BCCA322012D1}"
+              DTS:DTSID="{5DC01787-3B7F-40E9-A224-AFD273BEE630}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +164,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ArrDelay"
-              DTS:DTSID="{FF019754-B01F-46D3-AF09-482E5E074FB8}"
+              DTS:DTSID="{6C3E6873-D602-430F-A70A-49C41CFB32CF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +173,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DepDelay"
-              DTS:DTSID="{663345AE-599C-4C65-BD09-02881383949D}"
+              DTS:DTSID="{66B38A3E-3211-41AF-869B-40E41CD614C3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -182,16 +182,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Origin"
-              DTS:DTSID="{E2B25B78-FE68-4A27-9C00-78DE8B918412}"
+              DTS:DTSID="{A1E4F264-92EB-4C3C-B000-3D720F010B82}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="36"
+              DTS:MaximumWidth="64"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dest"
-              DTS:DTSID="{6E685DFF-00F0-4368-89FB-ED461BF80BC2}"
+              DTS:DTSID="{22031280-4988-49C5-98CA-015DA0F38E19}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -200,7 +200,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Distance"
-              DTS:DTSID="{6DEEAE33-B4B7-4CC3-B268-A87813E6C902}"
+              DTS:DTSID="{376F8EFB-927B-44D2-A8A4-9F1B453D3941}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -209,7 +209,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TaxiIn"
-              DTS:DTSID="{DD898589-8319-4303-B8D7-881666EFE631}"
+              DTS:DTSID="{51CD4485-2D41-4B1F-AB30-26799EC91203}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -218,7 +218,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TaxiOut"
-              DTS:DTSID="{5EE69495-A19D-4AEC-BBBD-8298C0F7872F}"
+              DTS:DTSID="{E3857C3F-AD84-447C-9041-0CE23C90BCF8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -227,7 +227,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Cancelled"
-              DTS:DTSID="{F25F500E-9C7B-43AA-B863-E0D939D29F7B}"
+              DTS:DTSID="{7ABE63E7-4E95-4BCB-A7CA-DFA7D9A304D9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -236,7 +236,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CancellationCode"
-              DTS:DTSID="{E7F82891-92D1-40F8-8E82-FB916F5139EA}"
+              DTS:DTSID="{05980213-C638-4F56-B940-AC8BAA1B8067}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -245,7 +245,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Diverted"
-              DTS:DTSID="{70FFB382-507B-4DDE-ACA0-8949C4DB93F4}"
+              DTS:DTSID="{EDB68265-A5DE-4011-B3C8-0F44D6B6AD52}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -254,7 +254,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CarrierDelay"
-              DTS:DTSID="{67786545-5E2F-4ABF-A40D-DC4756326540}"
+              DTS:DTSID="{53B17D8B-8C89-4AF2-9A02-C93F560C9597}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -263,7 +263,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WeatherDelay"
-              DTS:DTSID="{DD2CDA5E-C2F0-448D-BB14-C6F3510FBC28}"
+              DTS:DTSID="{FB3472A1-1067-4CEF-B88C-A6F92B86AD62}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -272,7 +272,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NASDelay"
-              DTS:DTSID="{07B7E224-818C-427C-9459-45BAA4C04AC9}"
+              DTS:DTSID="{EF505ADE-58F9-4E2B-A932-FEE778B64B3F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -281,7 +281,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SecurityDelay"
-              DTS:DTSID="{BF13741C-6571-4ADE-9893-FE9DB5EEBFBE}"
+              DTS:DTSID="{F3FD1192-6FA0-421A-9B42-8F3D4B849B65}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -290,7 +290,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LateAircraftDelay"
-              DTS:DTSID="{E84D07DB-99AA-45EF-BC33-ACE6036DA2AC}"
+              DTS:DTSID="{421BF08C-DA28-4AD7-AF0C-F64A770BB491}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -298,15 +298,6 @@
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{22E3BA55-E50A-47DC-AA0D-BC45A85C7416}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="fileDirectory">
-      <DTS:VariableValue
-        DTS:DataType="8">C:\Studia\DataWarehouse\Flights\</DTS:VariableValue>
-    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{FB5886EB-D9C5-459B-96DE-6B5182C36B4E}"
@@ -341,7 +332,7 @@
         DTS:DTSID="{06488869-1cb1-4fe6-982e-d8d4a0ece973}"
         DTS:ObjectName="{86FD9B7F-F14E-4363-84E1-7DBDA1A5AF8D}">
         <DTS:PropertyExpression
-          DTS:Name="Directory">@[User::fileDirectory]</DTS:PropertyExpression>
+          DTS:Name="Directory">@[$Project::CSV_Flights_Directory]</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
@@ -493,7 +484,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DepTime]"
-                          length="5"
+                          length="6"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepTime]"
                           name="DepTime"
                           truncationRowDisposition="FailComponent">
@@ -515,7 +506,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSDepTime]"
-                          length="5"
+                          length="6"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSDepTime]"
                           name="CRSDepTime"
                           truncationRowDisposition="FailComponent">
@@ -537,7 +528,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ArrTime]"
-                          length="5"
+                          length="6"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrTime]"
                           name="ArrTime"
                           truncationRowDisposition="FailComponent">
@@ -559,7 +550,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSArrTime]"
-                          length="5"
+                          length="6"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSArrTime]"
                           name="CRSArrTime"
                           truncationRowDisposition="FailComponent">
@@ -581,7 +572,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UniqueCarrier]"
-                          length="6"
+                          length="8"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[UniqueCarrier]"
                           name="UniqueCarrier"
                           truncationRowDisposition="FailComponent">
@@ -625,7 +616,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TailNum]"
-                          length="2"
+                          length="16"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TailNum]"
                           name="TailNum"
                           truncationRowDisposition="FailComponent">
@@ -691,7 +682,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AirTime]"
-                          length="4"
+                          length="6"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[AirTime]"
                           name="AirTime"
                           truncationRowDisposition="FailComponent">
@@ -779,7 +770,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dest]"
-                          length="36"
+                          length="64"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Dest]"
                           name="Dest"
                           truncationRowDisposition="FailComponent">
@@ -1063,31 +1054,31 @@
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DepTime]"
                           codePage="1250"
                           dataType="str"
-                          length="5"
+                          length="6"
                           name="DepTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSDepTime]"
                           codePage="1250"
                           dataType="str"
-                          length="5"
+                          length="6"
                           name="CRSDepTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ArrTime]"
                           codePage="1250"
                           dataType="str"
-                          length="5"
+                          length="6"
                           name="ArrTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CRSArrTime]"
                           codePage="1250"
                           dataType="str"
-                          length="5"
+                          length="6"
                           name="CRSArrTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UniqueCarrier]"
                           codePage="1250"
                           dataType="str"
-                          length="6"
+                          length="8"
                           name="UniqueCarrier" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FlightNum]"
@@ -1099,7 +1090,7 @@
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TailNum]"
                           codePage="1250"
                           dataType="str"
-                          length="2"
+                          length="16"
                           name="TailNum" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ActualElapsedTime]"
@@ -1117,7 +1108,7 @@
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AirTime]"
                           codePage="1250"
                           dataType="str"
-                          length="4"
+                          length="6"
                           name="AirTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ArrDelay]"
@@ -1141,7 +1132,7 @@
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dest]"
                           codePage="1250"
                           dataType="str"
-                          length="36"
+                          length="64"
                           name="Dest" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Distance]"
@@ -1284,8 +1275,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{83BE8388-A983-4005-AAB3-ECDDC1A29DA3}"
-          DTS:ObjectName="{83BE8388-A983-4005-AAB3-ECDDC1A29DA3}"
+          DTS:DTSID="{4A02F54F-C64C-4A44-B57F-D11309D7D50C}"
+          DTS:ObjectName="{4A02F54F-C64C-4A44-B57F-D11309D7D50C}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::fileName" />
       </DTS:ForEachVariableMappings>
@@ -1318,7 +1309,7 @@
           Text=""
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="28.8,60"
+          Size="28.8,40"
           Id="d481185a-f9f4-432a-9150-2b46fe6711e8"
           TopLeft="786.42858482137,302.882357048741" />
       </GraphLayout>
@@ -1330,39 +1321,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Foreach CSV Flight Files\Data Flow\Row Count"
-          TopLeft="146.4,185.6" />
-        <NodeLayout
           Size="150.4,41.6"
           Id="Package\Foreach CSV Flight Files\Data Flow\Flat File Source"
           TopLeft="147.2,43.2" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Row Count"
+          TopLeft="160.114285947839,121.364704981477" />
         <EdgeLayout
           Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Flat File Source Output]"
-          TopLeft="222.4,84.8">
+          TopLeft="223.657142973919,84.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-11.2000000000001,100.8"
+              EndConnector="0,36.5647049814772"
               Start="0,0"
-              End="-11.2000000000001,93.3">
+              End="0,29.0647049814772">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.4" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.4"
-                    Point2="0,50.4"
-                    Point3="-4,50.4" />
-                  <mssgle:LineSegment
-                    End="-7.2000000000001,50.4" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-7.2000000000001,50.4"
-                    Point2="-11.2000000000001,50.4"
-                    Point3="-11.2000000000001,54.4" />
-                  <mssgle:LineSegment
-                    End="-11.2000000000001,93.3" />
+                    End="0,29.0647049814772" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

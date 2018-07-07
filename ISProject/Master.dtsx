@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Master"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{FFAA298B-D1DA-41E7-B1F1-8A5D73CAD12E}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{B832F528-3CE4-45AF-8932-005D48A0CE22}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:LogProviders>
@@ -238,13 +238,13 @@
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Execute Package Task"
+      DTS:refId="Package\EPT ETL Flights"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
       DTS:DTSID="{B5A2341B-4549-43EB-9235-094506BDAD45}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute Package Task"
+      DTS:ObjectName="EPT ETL Flights"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -263,7 +263,7 @@
       DTS:From="Package\Copy Dimension Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Execute Package Task" />
+      DTS:To="Package\EPT ETL Flights" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -393,8 +393,8 @@
           Id="Package\Copy Dimension Data"
           TopLeft="76,38" />
         <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\Execute Package Task"
+          Size="151.2,41.6"
+          Id="Package\EPT ETL Flights"
           TopLeft="511.836743410405,268.840337372392" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
