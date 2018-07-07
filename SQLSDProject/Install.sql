@@ -1,4 +1,11 @@
-﻿create database FlightsDB
+﻿use master
+go
+
+if exists(select * from sys.databases where name = 'FlightsDB')
+  drop database FlightsDB
+go
+
+create database FlightsDB
 go
 
 use FlightsDB
