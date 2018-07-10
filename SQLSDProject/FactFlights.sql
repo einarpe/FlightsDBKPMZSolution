@@ -23,7 +23,7 @@
 	TaxiIn smallint,
 	TaxiOut smallint,
 	Cancelled bit,
-	CancellationCode char,
+	CancellationCode varchar(4),
 	Diverted bit,
 	CarrierDelay smallint,
 	WeatherDelay smallint,

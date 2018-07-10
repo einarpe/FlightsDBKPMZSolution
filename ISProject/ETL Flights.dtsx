@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="7/7/2018 10:12:51 AM"
@@ -7,12 +7,12 @@
   DTS:CreatorName="PERSEI8\kuba"
   DTS:DTSID="{2467DE5A-DE7F-464B-B82D-F76CA58E48BF}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LastModifiedProductVersion="14.0.0800.90"
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL Flights"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{966E55E6-6971-4F99-97E1-242F97A26B5F}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{E4F4959C-A5D7-4965-A09C-1F5A36A9E5DA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1232,6 +1232,407 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB FactFlights"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[FactFlights]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Connections[OleDbConnection]"
+                      connectionManagerID="{5540D73A-FE74-49B3-836C-6122B58C6C25}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[WAREHOUSE]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[DepTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="DepTime"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DepTime]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepTime]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[CRSDepTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="CRSDepTime"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSDepTime]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSDepTime]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[ArrTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="ArrTime"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ArrTime]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrTime]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[CRSArrTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="CRSArrTime"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSArrTime]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSArrTime]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[FlightNum]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="16"
+                          cachedName="FlightNum"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[FlightNum]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[FlightNum]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[ActualElapsedTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="ActualElapsedTime"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ActualElapsedTime]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ActualElapsedTime]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[CRSElapsedTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="CRSElapsedTime"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSElapsedTime]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSElapsedTime]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[AirTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="AirTime"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[AirTime]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[AirTime]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[ArrDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="ArrDelay"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ArrDelay]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrDelay]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[DepDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="DepDelay"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DepDelay]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepDelay]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[Distance]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="16"
+                          cachedName="Distance"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[Distance]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Distance]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[TaxiIn]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="TaxiIn"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[TaxiIn]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiIn]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[TaxiOut]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="TaxiOut"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[TaxiOut]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiOut]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[Cancelled]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="Cancelled"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[Cancelled]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Cancelled]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[CancellationCode]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="CancellationCode"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CancellationCode]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CancellationCode]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[Diverted]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="Diverted"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[Diverted]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Diverted]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[CarrierDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="CarrierDelay"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CarrierDelay]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CarrierDelay]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[WeatherDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="WeatherDelay"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[WeatherDelay]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherDelay]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[NASDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="NASDelay"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[NASDelay]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[NASDelay]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[SecurityDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="SecurityDelay"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[SecurityDelay]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[SecurityDelay]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[LateAircraftDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="LateAircraftDelay"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[LateAircraftDelay]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[LateAircraftDelay]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                          dataType="i4"
+                          name="Id" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DepTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="5"
+                          name="DepTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DepTimeKey]"
+                          dataType="i4"
+                          name="DepTimeKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSDepTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="5"
+                          name="CRSDepTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSDepTimeKey]"
+                          dataType="i4"
+                          name="CRSDepTimeKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ArrTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="5"
+                          name="ArrTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ArrTimeKey]"
+                          dataType="i4"
+                          name="ArrTimeKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSArrTime]"
+                          codePage="1250"
+                          dataType="str"
+                          length="5"
+                          name="CRSArrTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSArrTimeKey]"
+                          dataType="i4"
+                          name="CRSArrTimeKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CarrierCodeKey]"
+                          dataType="i4"
+                          name="CarrierCodeKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[PlaneKey]"
+                          dataType="i4"
+                          name="PlaneKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[OriginKey]"
+                          dataType="i4"
+                          name="OriginKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DestKey]"
+                          dataType="i4"
+                          name="DestKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[FlightNum]"
+                          dataType="i2"
+                          name="FlightNum" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ActualElapsedTime]"
+                          dataType="i2"
+                          name="ActualElapsedTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSElapsedTime]"
+                          dataType="i2"
+                          name="CRSElapsedTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[AirTime]"
+                          dataType="i2"
+                          name="AirTime" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ArrDelay]"
+                          dataType="i2"
+                          name="ArrDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DepDelay]"
+                          dataType="i2"
+                          name="DepDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[Distance]"
+                          dataType="r4"
+                          name="Distance" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[TaxiIn]"
+                          dataType="i2"
+                          name="TaxiIn" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[TaxiOut]"
+                          dataType="i2"
+                          name="TaxiOut" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[Cancelled]"
+                          dataType="bool"
+                          name="Cancelled" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CancellationCode]"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
+                          name="CancellationCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[Diverted]"
+                          dataType="bool"
+                          name="Diverted" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CarrierDelay]"
+                          dataType="i2"
+                          name="CarrierDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[WeatherDelay]"
+                          dataType="i2"
+                          name="WeatherDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[NASDelay]"
+                          dataType="i2"
+                          name="NASDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[SecurityDelay]"
+                          dataType="i2"
+                          name="SecurityDelay" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[LateAircraftDelay]"
+                          dataType="i2"
+                          name="LateAircraftDelay" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Foreach CSV Flight Files\Data Flow\Row Count"
                   componentClassID="Microsoft.RowCount"
                   contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -1267,6 +1668,11 @@
                   endId="Package\Foreach CSV Flight Files\Data Flow\Row Count.Inputs[Row Count Input 1]"
                   name="Flat File Source Output"
                   startId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Row Count Output 1]"
+                  endId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Foreach CSV Flight Files\Data Flow\Row Count.Outputs[Row Count Output 1]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -1281,7 +1687,34 @@
           DTS:VariableName="User::fileName" />
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Trunc FactFlights"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{97E6C08D-71E3-4621-B44D-8C81930ED8F2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Trunc FactFlights"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5540D73A-FE74-49B3-836C-6122B58C6C25}"
+          SQLTask:SqlStatementSource="Truncate Table FactFlights" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CA29CB50-5EE8-48BE-9C03-580C76B687CB}"
+      DTS:From="Package\Trunc FactFlights"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach CSV Flight Files" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1293,25 +1726,51 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="125.6,41.6"
+          Size="126,42"
           Id="Package\Foreach CSV Flight Files\Data Flow"
-          TopLeft="121.803180982629,56.4235313088469" />
+          TopLeft="125.803180982629,71.4235313088469" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="401.6,220"
-          Size="401.6,263.2"
+          PanelSize="402,220"
+          Size="402,263"
           Id="Package\Foreach CSV Flight Files"
-          TopLeft="252.571432872694,55.2941184085134" />
+          TopLeft="252.571432872694,140.294118408513" />
         <AnnotationLayout
           Text=""
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="28.8,40"
+          Size="29,40"
           Id="d481185a-f9f4-432a-9150-2b46fe6711e8"
           TopLeft="786.42858482137,302.882357048741" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Trunc FactFlights"
+          TopLeft="372,43" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="453.785716436347,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.2941184085134"
+              Start="0,0"
+              End="0,47.7941184085134">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.7941184085134" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1319,13 +1778,13 @@
     design-time-name="Package\Foreach CSV Flight Files\Data Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150,42"
           Id="Package\Foreach CSV Flight Files\Data Flow\Flat File Source"
           TopLeft="147.2,43.2" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\Foreach CSV Flight Files\Data Flow\Row Count"
           TopLeft="160.114285947839,121.364704981477" />
         <EdgeLayout
@@ -1350,8 +1809,47 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights"
+          TopLeft="136,221" />
+        <EdgeLayout
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Row Count Output 1]"
+          TopLeft="224.557142973919,163.364704981477">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.635295018523"
+              Start="0,0"
+              End="0,50.135295018523">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.135295018523" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
