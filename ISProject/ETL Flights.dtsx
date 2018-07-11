@@ -7,12 +7,12 @@
   DTS:CreatorName="PERSEI8\kuba"
   DTS:DTSID="{2467DE5A-DE7F-464B-B82D-F76CA58E48BF}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.0800.90"
+  DTS:LastModifiedProductVersion="14.0.1000.169"
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL Flights"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{E4F4959C-A5D7-4965-A09C-1F5A36A9E5DA}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{0761A39D-676C-4565-A58F-2D4EB660AFBE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Year"
-              DTS:DTSID="{A8B8BA43-E453-43ED-9CFF-09907DD13D3C}"
+              DTS:DTSID="{09DD35EB-3EE4-4ECB-97E9-3A9C25A3AD10}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="Month"
-              DTS:DTSID="{F25BE67E-0747-420E-9D51-4B152392C6BA}"
+              DTS:DTSID="{D4C71D31-3F75-4835-888A-81D413A631FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -56,7 +56,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DayofMonth"
-              DTS:DTSID="{D26C14E7-0268-4E09-8EE1-DD772723F61A}"
+              DTS:DTSID="{B3342A0C-C32E-49DC-B784-DC2D89BFAFFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,7 +65,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DayOfWeek"
-              DTS:DTSID="{CA850F3C-7BA1-4BF7-B558-871D90FE4DEF}"
+              DTS:DTSID="{AB8AAE2A-3F1F-4E6C-9292-E04EA9BE67EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +74,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DepTime"
-              DTS:DTSID="{631DA4B0-18C2-4B42-A2DD-3FA725326B22}"
+              DTS:DTSID="{5F741302-8AC2-4E25-84C1-3C6ACB61C1D7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CRSDepTime"
-              DTS:DTSID="{77BB878A-0CF2-43BC-ACA5-239341D5F40F}"
+              DTS:DTSID="{EB771E72-2C94-4638-B0D4-ED6D8E9BCC12}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +92,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ArrTime"
-              DTS:DTSID="{43927063-47ED-43A2-8AC9-8C50987F73FF}"
+              DTS:DTSID="{0E751DDC-372B-4A2B-8580-C9857C846FDA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +101,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CRSArrTime"
-              DTS:DTSID="{7B172EB2-2824-49F4-9973-A825F2753185}"
+              DTS:DTSID="{47FEC149-9224-415E-8E83-6F310CB6D387}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +110,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="UniqueCarrier"
-              DTS:DTSID="{FBCC7452-54C0-454A-A331-2FF4F384159A}"
+              DTS:DTSID="{3A6EE2F3-505B-4739-AAC6-579584043985}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +119,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FlightNum"
-              DTS:DTSID="{D5B7F485-D090-4647-8024-FF8F4F039E68}"
+              DTS:DTSID="{C6CA06C3-0BFF-4EA6-B991-FEC56F524476}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -128,7 +128,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TailNum"
-              DTS:DTSID="{33FD2CD7-3CA6-4343-BB79-97AEBC5B4B54}"
+              DTS:DTSID="{40768A37-A851-4225-AD04-17EC107F7B4C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -137,7 +137,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ActualElapsedTime"
-              DTS:DTSID="{B273456C-A000-4EF9-A650-C0A600E4361E}"
+              DTS:DTSID="{74087525-9722-4E03-8B3A-1403B98E61AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +146,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CRSElapsedTime"
-              DTS:DTSID="{641A951C-6414-44D9-A8DE-C8CD79EFBF13}"
+              DTS:DTSID="{29013ABC-4537-4149-A4B3-D801FE62C189}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -155,7 +155,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AirTime"
-              DTS:DTSID="{F86C662F-E020-4848-BB6D-73E2CE7F4253}"
+              DTS:DTSID="{A96EE497-9F5C-4158-A67B-259DB45F2917}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +164,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ArrDelay"
-              DTS:DTSID="{B329D18F-2613-4C03-91E5-66446A8DE259}"
+              DTS:DTSID="{32608685-FF5A-4C91-B3A7-F76F149CFCE5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +173,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DepDelay"
-              DTS:DTSID="{D958FA18-FA6B-4636-AD2F-E4193859358C}"
+              DTS:DTSID="{0014FE21-C980-4C42-ADAC-B06A99E6F7F1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -182,7 +182,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Origin"
-              DTS:DTSID="{8A1A82D0-BB75-4CF3-B900-23FDE4CAFE30}"
+              DTS:DTSID="{21D6DCA0-FE9F-4D9C-8E6C-D6CD6F8A12C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -191,7 +191,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dest"
-              DTS:DTSID="{DFD5EE75-6732-45AF-9058-3195E982CCDB}"
+              DTS:DTSID="{13189CE6-1E8C-4D89-90F6-98C41A99E228}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -200,7 +200,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Distance"
-              DTS:DTSID="{B3D6234A-3033-4C60-BB3C-558E6F62DFB6}"
+              DTS:DTSID="{69679ABC-2CD3-48F4-899E-AE03DA635579}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -209,7 +209,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TaxiIn"
-              DTS:DTSID="{9AA8B282-7AE9-4727-963B-41621005C62E}"
+              DTS:DTSID="{AFB86318-E676-41D8-AE88-A1779135807D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -218,7 +218,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TaxiOut"
-              DTS:DTSID="{D47BC292-3DBF-4B03-B41C-48CEDF184AC1}"
+              DTS:DTSID="{FA8B8979-C081-42AE-9C24-2D35E93E24EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -227,7 +227,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Cancelled"
-              DTS:DTSID="{096533E7-43F4-417C-B8BA-BFB3A561D4D5}"
+              DTS:DTSID="{D91DC63E-2790-4B26-BF6F-4F1D7AD2C972}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -236,7 +236,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CancellationCode"
-              DTS:DTSID="{981A08E3-40C0-4BAB-81DE-1C92B26F2825}"
+              DTS:DTSID="{D3620540-3E73-4559-955A-CC82BF213C26}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -245,7 +245,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Diverted"
-              DTS:DTSID="{C1FD452F-1107-4C4B-8CA5-D7448686AB3F}"
+              DTS:DTSID="{26C13D86-1930-4BA9-BB74-1349FA3F2CFC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -254,7 +254,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CarrierDelay"
-              DTS:DTSID="{7DB5050E-0CDC-40D3-B6BE-CBF3C257EB35}"
+              DTS:DTSID="{9ABF380D-A647-42F2-A34B-B85F67D34D55}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -263,7 +263,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WeatherDelay"
-              DTS:DTSID="{46986A4C-3A87-46F4-A744-2A7897454B1C}"
+              DTS:DTSID="{BFFDEB07-C8A0-42DD-8759-F961FFCE17CD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -272,7 +272,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NASDelay"
-              DTS:DTSID="{A14E709D-8662-4ABB-B233-C66B271414B8}"
+              DTS:DTSID="{DEC7BB64-4E7D-4DA6-B462-D62C7FFA559E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -281,7 +281,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SecurityDelay"
-              DTS:DTSID="{35324CFC-70EC-4FE6-BFF7-8C40BC8E0865}"
+              DTS:DTSID="{B9F3053E-8AAA-4E43-B635-1D175DF4120A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -290,7 +290,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LateAircraftDelay"
-              DTS:DTSID="{5A07F700-AB0F-4FAB-B955-29358F888082}"
+              DTS:DTSID="{CCEABDDF-D894-4026-829F-928CB7367C39}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -336,7 +336,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Studia\DataWarehouse\Flights\" />
+              Folder="E:\Studia\Flights" />
             <FEFEProperty
               FileSpec="*.csv" />
             <FEFEProperty
@@ -362,6 +362,407 @@
             <pipeline
               version="1">
               <components>
+                <component
+                  refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[FlightNum]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="16"
+                          cachedName="FlightNum"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[FlightNum]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[FlightNum]} &lt; "A" ? (DT_WSTR,4)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[FlightNum]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">FlightNum &lt; "A" ? (DT_WSTR,4)FlightNum : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[ActualElapsedTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="ActualElapsedTime"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ActualElapsedTime]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ActualElapsedTime]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ActualElapsedTime]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ActualElapsedTime &lt; "A" ? (DT_WSTR,6)ActualElapsedTime : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[CRSElapsedTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="CRSElapsedTime"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSElapsedTime]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSElapsedTime]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CRSElapsedTime]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">CRSElapsedTime &lt; "A" ? (DT_WSTR,6)CRSElapsedTime : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[AirTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="AirTime"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[AirTime]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[AirTime]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[AirTime]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">AirTime &lt; "A" ? (DT_WSTR,6)AirTime : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[ArrDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="ArrDelay"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrDelay]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrDelay]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[ArrDelay]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ArrDelay &lt; "A" ? (DT_WSTR,6)ArrDelay : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[DepDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="DepDelay"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepDelay]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepDelay]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DepDelay]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">DepDelay &lt; "A" ? (DT_WSTR,6)DepDelay : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[TaxiIn]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="TaxiIn"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiIn]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiIn]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiIn]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">TaxiIn &lt; "A" ? (DT_WSTR,6)TaxiIn : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[TaxiOut]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="TaxiOut"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiOut]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiOut]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TaxiOut]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">TaxiOut &lt; "A" ? (DT_WSTR,6)TaxiOut : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[CarrierDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="CarrierDelay"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CarrierDelay]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CarrierDelay]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[CarrierDelay]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">CarrierDelay &lt; "A" ? (DT_WSTR,6)CarrierDelay : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[WeatherDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="WeatherDelay"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherDelay]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherDelay]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherDelay]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">WeatherDelay &lt; "A" ? (DT_WSTR,6)WeatherDelay : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[NASDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="NASDelay"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[NASDelay]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[NASDelay]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[NASDelay]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">NASDelay &lt; "A" ? (DT_WSTR,6)NASDelay : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[SecurityDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="SecurityDelay"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[SecurityDelay]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[SecurityDelay]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[SecurityDelay]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">SecurityDelay &lt; "A" ? (DT_WSTR,6)SecurityDelay : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[LateAircraftDelay]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="LateAircraftDelay"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[LateAircraftDelay]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[LateAircraftDelay]} &lt; "A" ? (DT_WSTR,6)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[LateAircraftDelay]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">LateAircraftDelay &lt; "A" ? (DT_WSTR,6)LateAircraftDelay : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input].Columns[Distance]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="16"
+                          cachedName="Distance"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Distance]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Distance]} &lt; "A" ? (DT_WSTR,32)#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Distance]} : "-1"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">Distance &lt; "A" ? (DT_WSTR,32)Distance : "-1"</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source"
                   componentClassID="Microsoft.FlatFileSource"
@@ -1482,7 +1883,7 @@
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DepTime]"
                           codePage="1250"
                           dataType="str"
-                          length="5"
+                          length="6"
                           name="DepTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DepTimeKey]"
@@ -1492,7 +1893,7 @@
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSDepTime]"
                           codePage="1250"
                           dataType="str"
-                          length="5"
+                          length="6"
                           name="CRSDepTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSDepTimeKey]"
@@ -1502,7 +1903,7 @@
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ArrTime]"
                           codePage="1250"
                           dataType="str"
-                          length="5"
+                          length="6"
                           name="ArrTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ArrTimeKey]"
@@ -1512,7 +1913,7 @@
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSArrTime]"
                           codePage="1250"
                           dataType="str"
-                          length="5"
+                          length="6"
                           name="CRSArrTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSArrTimeKey]"
@@ -1572,7 +1973,9 @@
                           name="TaxiOut" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[Cancelled]"
-                          dataType="bool"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
                           name="Cancelled" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CancellationCode]"
@@ -1582,7 +1985,9 @@
                           name="CancellationCode" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[Diverted]"
-                          dataType="bool"
+                          codePage="1250"
+                          dataType="str"
+                          length="4"
                           name="Diverted" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CarrierDelay]"
@@ -1664,8 +2069,13 @@
               </components>
               <paths>
                 <path
-                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Flat File Source Output]"
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Derived Column Output]"
                   endId="Package\Foreach CSV Flight Files\Data Flow\Row Count.Inputs[Row Count Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Flat File Source Output]"
+                  endId="Package\Foreach CSV Flight Files\Data Flow\Derived Column.Inputs[Derived Column Input]"
                   name="Flat File Source Output"
                   startId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output]" />
                 <path
@@ -1726,7 +2136,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="126,42"
           Id="Package\Foreach CSV Flight Files\Data Flow"
@@ -1738,13 +2148,6 @@
           Size="402,263"
           Id="Package\Foreach CSV Flight Files"
           TopLeft="252.571432872694,140.294118408513" />
-        <AnnotationLayout
-          Text=""
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="29,40"
-          Id="d481185a-f9f4-432a-9150-2b46fe6711e8"
-          TopLeft="786.42858482137,302.882357048741" />
         <NodeLayout
           Size="164,42"
           Id="Package\Trunc FactFlights"
@@ -1771,6 +2174,13 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text=""
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="29,40"
+          Id="d481185a-f9f4-432a-9150-2b46fe6711e8"
+          TopLeft="786.42858482137,302.882357048741" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1780,27 +2190,43 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="130,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Row Count"
+          TopLeft="195.114285947839,260.364704981477" />
+        <NodeLayout
           Size="150,42"
           Id="Package\Foreach CSV Flight Files\Data Flow\Flat File Source"
           TopLeft="147.2,43.2" />
         <NodeLayout
-          Size="130,42"
-          Id="Package\Foreach CSV Flight Files\Data Flow\Row Count"
-          TopLeft="160.114285947839,121.364704981477" />
+          Size="176,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights"
+          TopLeft="148,378" />
         <EdgeLayout
-          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Flat File Source Output]"
-          TopLeft="223.657142973919,84.8">
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Row Count Output 1]"
+          TopLeft="260.114285947839,302.364704981477">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.5647049814772"
+              EndConnector="-24.114285947839,75.635295018523"
               Start="0,0"
-              End="0,29.0647049814772">
+              End="-24.114285947839,68.135295018523">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.0647049814772" />
+                    End="0,33.8176475092615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.8176475092615"
+                    Point2="0,37.8176475092615"
+                    Point3="-4,37.8176475092615" />
+                  <mssgle:LineSegment
+                    End="-20.114285947839,37.8176475092615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.114285947839,37.8176475092615"
+                    Point2="-24.114285947839,37.8176475092615"
+                    Point3="-24.114285947839,41.8176475092615" />
+                  <mssgle:LineSegment
+                    End="-24.114285947839,68.135295018523" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1810,23 +2236,57 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="176,42"
-          Id="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights"
-          TopLeft="136,221" />
+          Size="158,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Derived Column"
+          TopLeft="147,140" />
         <EdgeLayout
-          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Row Count Output 1]"
-          TopLeft="224.557142973919,163.364704981477">
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Flat File Source Output]"
+          TopLeft="224.1,85.2">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57.635295018523"
+              EndConnector="0,54.8"
               Start="0,0"
-              End="0,50.135295018523">
+              End="0,47.3">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.135295018523" />
+                    End="0,47.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Derived Column Output]"
+          TopLeft="226,182">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.114285947839,78.364704981477"
+              Start="0,0"
+              End="34.114285947839,70.864704981477">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.1823524907385" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.1823524907385"
+                    Point2="0,39.1823524907385"
+                    Point3="4,39.1823524907385" />
+                  <mssgle:LineSegment
+                    End="30.114285947839,39.1823524907385" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.114285947839,39.1823524907385"
+                    Point2="34.114285947839,39.1823524907385"
+                    Point3="34.114285947839,43.1823524907385" />
+                  <mssgle:LineSegment
+                    End="34.114285947839,70.864704981477" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
