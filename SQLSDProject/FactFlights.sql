@@ -1,14 +1,11 @@
 ﻿CREATE TABLE [dbo].[FactFlights]
 (
 	[Id] INT not null identity(1,1) primary key,
-	DepTime char(6), 
 	DepTimeKey int, 
+	DepTime char(6), 
 	CRSDepTime char(6), 
-	CRSDepTimeKey int,
 	ArrTime char(6),
-	ArrTimeKey int ,
 	CRSArrTime char(6),
-	CRSArrTimeKey int,
 	CarrierCodeKey int,
 	PlaneKey int,
 	OriginKey int,
@@ -30,4 +27,13 @@
 	NASDelay smallint,
 	SecurityDelay smallint,
 	LateAircraftDelay smallint
+	/* 
+	-- chyba raczej niepotrzebne, troche komplikuje logike niestety
+	, 
+    CONSTRAINT [FK_FactFlights_ToDimDate] FOREIGN KEY (DepTimeKey) REFERENCES DimDate([DateKey]),
+	CONSTRAINT [FK_FactFlights_ToDimCarrier] FOREIGN KEY (CarrierCodeKey) REFERENCES DimCarrier([CarrierKey]),
+	CONSTRAINT [FK_FactFlights_ToDimPlane] FOREIGN KEY (PlaneKey) REFERENCES DimPlane([PlaneKey]),
+	CONSTRAINT [FK_FactFlights_ToDimAirport_1] FOREIGN KEY (OriginKey) REFERENCES DimAirport([AirportKey]),
+	CONSTRAINT [FK_FactFlights_ToDimAirport_2] FOREIGN KEY (DestKey) REFERENCES DimAirport([AirportKey])
+	*/
 )

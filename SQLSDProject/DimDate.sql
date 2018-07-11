@@ -3,8 +3,8 @@
 	[DateKey] int NOT NULL identity(1,1) PRIMARY KEY, 
 	[DateValue] DATETIME2 NOT NULL UNIQUE,
     [Year] SMALLINT NOT NULL, 
-    [Month] TINYINT NOT NULL, 
-    [Day] TINYINT NOT NULL, 
+    [Month] SMALLINT NOT NULL, 
+    [Day] SMALLINT NOT NULL, 
 	[DayOfWeek] TINYINT NOT NULL,
     [ShortDateString] CHAR(10) NOT NULL,
 	[DayOfWeekString] as 

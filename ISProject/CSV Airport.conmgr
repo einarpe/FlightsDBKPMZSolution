@@ -17,11 +17,11 @@
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
+          DTS:MaximumWidth="16"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="iata"
-          DTS:DTSID="{B62E34A8-2726-4797-8189-506AC6C68F1A}"
+          DTS:DTSID="{8AE70C42-457E-4F3F-BE4C-B4F89FA7DD7E}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="airport"
-          DTS:DTSID="{0D58FDC9-01BC-4059-BB35-5EB63000C5AB}"
+          DTS:DTSID="{E26A086A-6ED4-43E4-BFEA-2AFDC569A180}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="city"
-          DTS:DTSID="{7EAC3EC4-8D86-4BEA-9574-E9644AE391AF}"
+          DTS:DTSID="{02E67820-CB47-4FCA-BA3C-3AC0EFECC7D7}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="state"
-          DTS:DTSID="{68F30443-3BEC-448D-9297-AC78F377CC82}"
+          DTS:DTSID="{6AF794C0-13BF-4755-AE6B-393425C91755}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="country"
-          DTS:DTSID="{A5D21135-ED84-4EE5-8B09-9ED7071121BA}"
+          DTS:DTSID="{3950C3F7-8A52-4F43-9E8B-447C64FEDE0E}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -66,16 +66,16 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="lat"
-          DTS:DTSID="{6E8CA89E-F416-41DE-BC3B-73F6A3F7EB40}"
+          DTS:DTSID="{4D1960CD-62F1-42B2-806F-811DA77645B6}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
-          DTS:ColumnDelimiter="_x000A_"
+          DTS:ColumnDelimiter="_x000D__x000A_"
           DTS:MaximumWidth="50"
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="long"
-          DTS:DTSID="{DA94A091-1244-4FAE-9EF7-2075CC0A9A1A}"
+          DTS:DTSID="{42A2191E-DD00-4AAF-899F-86D534407928}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

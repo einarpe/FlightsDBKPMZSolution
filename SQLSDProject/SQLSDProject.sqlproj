@@ -68,6 +68,7 @@
     <Build Include="fillUpDimDate.sql" />
     <Build Include="fillUpDimUnknownMembers.sql" />
     <Build Include="ScriptInstall.sql" />
+    <Build Include="updateFactFlightsUnknowns.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SQLSDProject.refactorlog" />

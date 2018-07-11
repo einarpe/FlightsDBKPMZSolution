@@ -7,12 +7,12 @@
   DTS:CreatorName="PERSEI8\kuba"
   DTS:DTSID="{2467DE5A-DE7F-464B-B82D-F76CA58E48BF}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.1000.169"
+  DTS:LastModifiedProductVersion="14.0.0800.90"
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL Flights"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{0761A39D-676C-4565-A58F-2D4EB660AFBE}">
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{9F2E5FD0-25EA-42B4-B02E-D56087A29443}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,24 +39,23 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Year"
-              DTS:DTSID="{09DD35EB-3EE4-4ECB-97E9-3A9C25A3AD10}"
+              DTS:DTSID="{B4CBACBF-FE09-460C-A70F-8A8F5C5FAFC6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="16"
+              DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="Month"
-              DTS:DTSID="{D4C71D31-3F75-4835-888A-81D413A631FD}"
+              DTS:DTSID="{2662531A-AD40-4625-A1CB-DAC99A31519A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
-              DTS:DataType="129"
+              DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="DayofMonth"
-              DTS:DTSID="{B3342A0C-C32E-49DC-B784-DC2D89BFAFFF}"
+              DTS:DTSID="{B7A0C6E9-4947-43CA-8767-86DE157F4FD7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,7 +64,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DayOfWeek"
-              DTS:DTSID="{AB8AAE2A-3F1F-4E6C-9292-E04EA9BE67EE}"
+              DTS:DTSID="{21AD293B-A7C3-4791-B9FE-30B5D56CA244}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +73,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DepTime"
-              DTS:DTSID="{5F741302-8AC2-4E25-84C1-3C6ACB61C1D7}"
+              DTS:DTSID="{CDC010DC-1F5C-425D-B0B0-0EF1BA2EA2FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +82,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CRSDepTime"
-              DTS:DTSID="{EB771E72-2C94-4638-B0D4-ED6D8E9BCC12}"
+              DTS:DTSID="{519312C7-A5D0-4CF4-A5AC-DE9C0ACB022D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +91,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ArrTime"
-              DTS:DTSID="{0E751DDC-372B-4A2B-8580-C9857C846FDA}"
+              DTS:DTSID="{164FF7B2-9253-4030-BE9F-FA47C6BCC015}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +100,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CRSArrTime"
-              DTS:DTSID="{47FEC149-9224-415E-8E83-6F310CB6D387}"
+              DTS:DTSID="{7916108F-623A-40BC-94A4-D8B1EC397459}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +109,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="UniqueCarrier"
-              DTS:DTSID="{3A6EE2F3-505B-4739-AAC6-579584043985}"
+              DTS:DTSID="{FA819F28-69D4-446A-8993-E68664AADA1A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +118,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FlightNum"
-              DTS:DTSID="{C6CA06C3-0BFF-4EA6-B991-FEC56F524476}"
+              DTS:DTSID="{DD04E5DD-843E-4908-BBCE-5E4563D8F1F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -128,7 +127,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TailNum"
-              DTS:DTSID="{40768A37-A851-4225-AD04-17EC107F7B4C}"
+              DTS:DTSID="{44350A3E-FE2F-48C3-B52E-158CADEC01A8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -137,7 +136,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ActualElapsedTime"
-              DTS:DTSID="{74087525-9722-4E03-8B3A-1403B98E61AF}"
+              DTS:DTSID="{42D9AC39-8B0A-45D0-8BCD-BD28064F75AC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +145,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CRSElapsedTime"
-              DTS:DTSID="{29013ABC-4537-4149-A4B3-D801FE62C189}"
+              DTS:DTSID="{5323D663-1F74-4A2E-BC1E-B0D4692839DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -155,7 +154,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AirTime"
-              DTS:DTSID="{A96EE497-9F5C-4158-A67B-259DB45F2917}"
+              DTS:DTSID="{4D678152-DACB-406A-8515-4537440749E3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +163,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ArrDelay"
-              DTS:DTSID="{32608685-FF5A-4C91-B3A7-F76F149CFCE5}"
+              DTS:DTSID="{8A6E628D-4E42-4808-811E-B730B23D312B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +172,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DepDelay"
-              DTS:DTSID="{0014FE21-C980-4C42-ADAC-B06A99E6F7F1}"
+              DTS:DTSID="{36ABF8A1-AFF4-474E-8034-07EF8EADC86A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -182,7 +181,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Origin"
-              DTS:DTSID="{21D6DCA0-FE9F-4D9C-8E6C-D6CD6F8A12C8}"
+              DTS:DTSID="{8497E39B-1F7D-4F9E-BB1B-319EA969380F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -191,7 +190,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dest"
-              DTS:DTSID="{13189CE6-1E8C-4D89-90F6-98C41A99E228}"
+              DTS:DTSID="{20BEF560-68C1-4695-97BA-013B8A01612A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -200,7 +199,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Distance"
-              DTS:DTSID="{69679ABC-2CD3-48F4-899E-AE03DA635579}"
+              DTS:DTSID="{B081B46D-5F24-4D4D-96FF-EFDA69AAC715}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -209,7 +208,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TaxiIn"
-              DTS:DTSID="{AFB86318-E676-41D8-AE88-A1779135807D}"
+              DTS:DTSID="{F8DF1FBD-005B-45BC-A7C6-EFCB128DD314}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -218,7 +217,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TaxiOut"
-              DTS:DTSID="{FA8B8979-C081-42AE-9C24-2D35E93E24EF}"
+              DTS:DTSID="{F43FD2C9-0C3C-4ACE-8E69-02797779EFC1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -227,7 +226,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Cancelled"
-              DTS:DTSID="{D91DC63E-2790-4B26-BF6F-4F1D7AD2C972}"
+              DTS:DTSID="{E6ECFD6D-EB98-47E7-BBE9-96AEACC6CA0C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -236,7 +235,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CancellationCode"
-              DTS:DTSID="{D3620540-3E73-4559-955A-CC82BF213C26}"
+              DTS:DTSID="{5A586050-FC0D-49C4-A244-878928F17890}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -245,7 +244,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Diverted"
-              DTS:DTSID="{26C13D86-1930-4BA9-BB74-1349FA3F2CFC}"
+              DTS:DTSID="{3C9EB145-CDDE-4D47-8548-D50FDA9144A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -254,7 +253,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CarrierDelay"
-              DTS:DTSID="{9ABF380D-A647-42F2-A34B-B85F67D34D55}"
+              DTS:DTSID="{500735CA-E26B-4B9C-B062-F091E3987F01}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -263,7 +262,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WeatherDelay"
-              DTS:DTSID="{BFFDEB07-C8A0-42DD-8759-F961FFCE17CD}"
+              DTS:DTSID="{D6919A1B-CF99-419E-84E6-455D9ABFF92D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -272,7 +271,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="NASDelay"
-              DTS:DTSID="{DEC7BB64-4E7D-4DA6-B462-D62C7FFA559E}"
+              DTS:DTSID="{84467AAE-D408-47EB-8067-23F72E136822}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -281,7 +280,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SecurityDelay"
-              DTS:DTSID="{B9F3053E-8AAA-4E43-B635-1D175DF4120A}"
+              DTS:DTSID="{B4070D64-B6F7-4339-82C0-8F39DA55FDFC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -290,7 +289,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LateAircraftDelay"
-              DTS:DTSID="{CCEABDDF-D894-4026-829F-928CB7367C39}"
+              DTS:DTSID="{C772C17E-B59D-43FE-922E-0267EE35D83A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -336,7 +335,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="E:\Studia\Flights" />
+              Folder="D:\Studia\HurtownieDanych\Flights" />
             <FEFEProperty
               FileSpec="*.csv" />
             <FEFEProperty
@@ -816,7 +815,7 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Month]"
-                          dataType="i1"
+                          dataType="i2"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Month]"
@@ -836,12 +835,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DayofMonth]"
-                          codePage="1250"
-                          dataType="str"
+                          dataType="i2"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayofMonth]"
-                          length="10"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DayofMonth]"
                           name="DayofMonth"
                           truncationRowDisposition="FailComponent">
@@ -1437,13 +1434,11 @@
                           name="Year" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Month]"
-                          dataType="i1"
+                          dataType="i2"
                           name="Month" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayofMonth]"
-                          codePage="1250"
-                          dataType="str"
-                          length="10"
+                          dataType="i2"
                           name="DayofMonth" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DayOfWeek]"
@@ -1625,6 +1620,836 @@
                           refId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup CarrierCodeKey"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCarrier]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCarrier]) [refTable]
+where [refTable].[Code] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CarrierKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Code" dataType="DT_STR" length="16" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Description" dataType="DT_STR" length="128" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[UniqueCarrier]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Connections[OleDbConnection]"
+                      connectionManagerID="{5540D73A-FE74-49B3-836C-6122B58C6C25}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[WAREHOUSE]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Inputs[Lookup Input].Columns[UniqueCarrier]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="UniqueCarrier"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[UniqueCarrier]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">Code</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Match Output].Columns[CarrierCodeKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Match Output].Columns[CarrierCodeKey]"
+                          name="CarrierCodeKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">CarrierKey</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup DepTimeKey"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
+where [refTable].[Year] = ? and [refTable].[Month] = ? and [refTable].[Day] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateValue" dataType="DT_DBTIMESTAMP2" length="0" precision="0" scale="7" codePage="0"/&gt;&lt;referenceColumn name="Year" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Month" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Day" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfWeek" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ShortDateString" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="DayOfWeekString" dataType="DT_STR" length="9" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Year]};#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Month]};#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DayofMonth]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Connections[OleDbConnection]"
+                      connectionManagerID="{5540D73A-FE74-49B3-836C-6122B58C6C25}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[WAREHOUSE]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Inputs[Lookup Input].Columns[Year]"
+                          cachedDataType="i2"
+                          cachedName="Year"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Year]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">Year</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Inputs[Lookup Input].Columns[Month]"
+                          cachedDataType="i2"
+                          cachedName="Month"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Month]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">Month</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Inputs[Lookup Input].Columns[DayofMonth]"
+                          cachedDataType="i2"
+                          cachedName="DayofMonth"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[DayofMonth]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">Day</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Match Output].Columns[DepTimeKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Match Output].Columns[DepTimeKey]"
+                          name="DepTimeKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">DateKey</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup DestKey"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimAirport]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimAirport]) [refTable]
+where [refTable].[IATA] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AirportKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IATA" dataType="DT_STR" length="16" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="128" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="State" dataType="DT_STR" length="64" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="City" dataType="DT_STR" length="128" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Country" dataType="DT_STR" length="64" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_NUMERIC" length="0" precision="14" scale="10" codePage="0"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_NUMERIC" length="0" precision="14" scale="10" codePage="0"/&gt;&lt;referenceColumn name="PositionString" dataType="DT_STR" length="84" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Dest]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Connections[OleDbConnection]"
+                      connectionManagerID="{5540D73A-FE74-49B3-836C-6122B58C6C25}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[WAREHOUSE]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Inputs[Lookup Input].Columns[Dest]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="64"
+                          cachedName="Dest"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Dest]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">IATA</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Match Output].Columns[DestKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Match Output].Columns[DestKey]"
+                          name="DestKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">AirportKey</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup OriginKey"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimAirport]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimAirport]) [refTable]
+where [refTable].[IATA] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AirportKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IATA" dataType="DT_STR" length="16" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="128" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="State" dataType="DT_STR" length="64" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="City" dataType="DT_STR" length="128" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Country" dataType="DT_STR" length="64" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_NUMERIC" length="0" precision="14" scale="10" codePage="0"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_NUMERIC" length="0" precision="14" scale="10" codePage="0"/&gt;&lt;referenceColumn name="PositionString" dataType="DT_STR" length="84" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Origin]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Connections[OleDbConnection]"
+                      connectionManagerID="{5540D73A-FE74-49B3-836C-6122B58C6C25}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[WAREHOUSE]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Inputs[Lookup Input].Columns[Origin]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="Origin"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Origin]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">IATA</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Match Output].Columns[OriginKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Match Output].Columns[OriginKey]"
+                          name="OriginKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">AirportKey</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup PlaneKey"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimPlane]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimPlane]) [refTable]
+where [refTable].[TailNum] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="PlaneKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TailNum" dataType="DT_STR" length="16" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Type" dataType="DT_STR" length="64" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Manufacturer" dataType="DT_STR" length="32" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="IssueDate" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Model" dataType="DT_STR" length="32" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Status" dataType="DT_STR" length="32" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="AircraftType" dataType="DT_STR" length="64" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="EngineType" dataType="DT_STR" length="32" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TailNum]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Connections[OleDbConnection]"
+                      connectionManagerID="{5540D73A-FE74-49B3-836C-6122B58C6C25}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[WAREHOUSE]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Inputs[Lookup Input].Columns[TailNum]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="16"
+                          cachedName="TailNum"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[TailNum]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">TailNum</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Match Output].Columns[PlaneKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Match Output].Columns[PlaneKey]"
+                          name="PlaneKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">PlaneKey</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -1872,6 +2697,36 @@
                           cachedName="LateAircraftDelay"
                           externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[LateAircraftDelay]"
                           lineageId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[LateAircraftDelay]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[DepTimeKey]"
+                          cachedDataType="i4"
+                          cachedName="DepTimeKey"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DepTimeKey]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Match Output].Columns[DepTimeKey]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[CarrierCodeKey]"
+                          cachedDataType="i4"
+                          cachedName="CarrierCodeKey"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CarrierCodeKey]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Match Output].Columns[CarrierCodeKey]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[PlaneKey]"
+                          cachedDataType="i4"
+                          cachedName="PlaneKey"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[PlaneKey]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Match Output].Columns[PlaneKey]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[OriginKey]"
+                          cachedDataType="i4"
+                          cachedName="OriginKey"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[OriginKey]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Match Output].Columns[OriginKey]" />
+                        <inputColumn
+                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].Columns[DestKey]"
+                          cachedDataType="i4"
+                          cachedName="DestKey"
+                          externalMetadataColumnId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[DestKey]"
+                          lineageId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Match Output].Columns[DestKey]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -1896,29 +2751,17 @@
                           length="6"
                           name="CRSDepTime" />
                         <externalMetadataColumn
-                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSDepTimeKey]"
-                          dataType="i4"
-                          name="CRSDepTimeKey" />
-                        <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ArrTime]"
                           codePage="1250"
                           dataType="str"
                           length="6"
                           name="ArrTime" />
                         <externalMetadataColumn
-                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[ArrTimeKey]"
-                          dataType="i4"
-                          name="ArrTimeKey" />
-                        <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSArrTime]"
                           codePage="1250"
                           dataType="str"
                           length="6"
                           name="CRSArrTime" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CRSArrTimeKey]"
-                          dataType="i4"
-                          name="CRSArrTimeKey" />
                         <externalMetadataColumn
                           refId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input].ExternalColumns[CarrierCodeKey]"
                           dataType="i4"
@@ -2079,8 +2922,33 @@
                   name="Flat File Source Output"
                   startId="Package\Foreach CSV Flight Files\Data Flow\Flat File Source.Outputs[Flat File Source Output]" />
                 <path
-                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Row Count Output 1]"
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output]"
+                  endId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output1]"
+                  endId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output2]"
+                  endId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output3]"
+                  endId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output4]"
                   endId="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights.Inputs[OLE DB Destination Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Foreach CSV Flight Files\Data Flow.Paths[Row Count Output 1]"
+                  endId="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey.Inputs[Lookup Input]"
                   name="Row Count Output 1"
                   startId="Package\Foreach CSV Flight Files\Data Flow\Row Count.Outputs[Row Count Output 1]" />
               </paths>
@@ -2114,6 +2982,23 @@
           SQLTask:SqlStatementSource="Truncate Table FactFlights" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Unknowns"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{DADD14F3-DC2F-4874-89B7-BE05E661AD29}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Unknowns"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5540D73A-FE74-49B3-836C-6122B58C6C25}"
+          SQLTask:SqlStatementSource="exec [updateFactFlightsUnknowns]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -2124,6 +3009,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Foreach CSV Flight Files" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{CF2236A6-A5AD-4E12-A42C-2FDDDD832702}"
+      DTS:From="Package\Foreach CSV Flight Files"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Update Unknowns" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2181,52 +3074,24 @@
           Size="29,40"
           Id="d481185a-f9f4-432a-9150-2b46fe6711e8"
           TopLeft="786.42858482137,302.882357048741" />
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\Foreach CSV Flight Files\Data Flow">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="130,42"
-          Id="Package\Foreach CSV Flight Files\Data Flow\Row Count"
-          TopLeft="195.114285947839,260.364704981477" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Foreach CSV Flight Files\Data Flow\Flat File Source"
-          TopLeft="147.2,43.2" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights"
-          TopLeft="148,378" />
+          Size="169,42"
+          Id="Package\Update Unknowns"
+          TopLeft="364,487" />
         <EdgeLayout
-          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Row Count Output 1]"
-          TopLeft="260.114285947839,302.364704981477">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="451.035716436347,403.294118408513">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-24.114285947839,75.635295018523"
+              EndConnector="0,83.705881591487"
               Start="0,0"
-              End="-24.114285947839,68.135295018523">
+              End="0,76.205881591487">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.8176475092615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.8176475092615"
-                    Point2="0,37.8176475092615"
-                    Point3="-4,37.8176475092615" />
-                  <mssgle:LineSegment
-                    End="-20.114285947839,37.8176475092615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20.114285947839,37.8176475092615"
-                    Point2="-24.114285947839,37.8176475092615"
-                    Point3="-24.114285947839,41.8176475092615" />
-                  <mssgle:LineSegment
-                    End="-24.114285947839,68.135295018523" />
+                    End="0,76.205881591487" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2235,10 +3100,30 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach CSV Flight Files\Data Flow">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Flat File Source"
+          TopLeft="147.2,43.2" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\OLE DB FactFlights"
+          TopLeft="115,457" />
         <NodeLayout
           Size="158,42"
           Id="Package\Foreach CSV Flight Files\Data Flow\Derived Column"
           TopLeft="147,140" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Row Count"
+          TopLeft="156.114285947839,213.364704981477" />
         <EdgeLayout
           Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Flat File Source Output]"
           TopLeft="224.1,85.2">
@@ -2263,36 +3148,198 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Derived Column Output]"
-          TopLeft="226,182">
+          TopLeft="223.557142973919,182">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="34.114285947839,78.364704981477"
+              EndConnector="0,31.364704981477"
               Start="0,0"
-              End="34.114285947839,70.864704981477">
+              End="0,23.864704981477">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.1823524907385" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.1823524907385"
-                    Point2="0,39.1823524907385"
-                    Point3="4,39.1823524907385" />
-                  <mssgle:LineSegment
-                    End="30.114285947839,39.1823524907385" />
-                  <mssgle:CubicBezierSegment
-                    Point1="30.114285947839,39.1823524907385"
-                    Point2="34.114285947839,39.1823524907385"
-                    Point3="34.114285947839,43.1823524907385" />
-                  <mssgle:LineSegment
-                    End="34.114285947839,70.864704981477" />
+                    End="0,23.864704981477" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey"
+          TopLeft="129,327" />
+        <EdgeLayout
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Row Count Output 1]"
+          TopLeft="220.557142973919,255.364704981477">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71.635295018523"
+              Start="0,0"
+              End="0,64.135295018523">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.135295018523" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey"
+          TopLeft="369,332" />
+        <EdgeLayout
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output]"
+          TopLeft="311,350.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58,0"
+              Start="0,0"
+              End="50.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-22.94138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey"
+          TopLeft="662,333" />
+        <EdgeLayout
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output1]"
+          TopLeft="566,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96,0"
+              Start="0,0"
+              End="88.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="88.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-3.94138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey"
+          TopLeft="935,331" />
+        <EdgeLayout
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output2]"
+          TopLeft="827,353">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108,0"
+              Start="0,0"
+              End="100.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="100.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="2.05861328125,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey"
+          TopLeft="1192,329" />
+        <EdgeLayout
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output3]"
+          TopLeft="1101,351">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="91,0"
+              Start="0,0"
+              End="83.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="83.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-6.44138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach CSV Flight Files\Data Flow.Paths[Lookup Match Output4]"
+          TopLeft="1272,371">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-1069,86"
+              Start="0,0"
+              End="-1069,78.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39"
+                    Point2="0,43"
+                    Point3="-4,43" />
+                  <mssgle:LineSegment
+                    End="-1065,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-1065,43"
+                    Point2="-1069,43"
+                    Point3="-1069,47" />
+                  <mssgle:LineSegment
+                    End="-1069,78.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-582.69138671875,48,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2308,6 +3355,121 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach CSV Flight Files\Data Flow\Lookup DepTimeKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach CSV Flight Files\Data Flow\Lookup CarrierCodeKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCarrier]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach CSV Flight Files\Data Flow\Lookup PlaneKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimPlane]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach CSV Flight Files\Data Flow\Lookup OriginKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAirport]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach CSV Flight Files\Data Flow\Lookup DestKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAirport]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

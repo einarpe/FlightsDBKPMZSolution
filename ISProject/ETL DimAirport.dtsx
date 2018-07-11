@@ -7,12 +7,12 @@
   DTS:CreatorName="KAFFEIN\kuba"
   DTS:DTSID="{3EBEE135-B45B-4CFD-8F5C-DC8AEFF5B91E}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LastModifiedProductVersion="14.0.0800.90"
   DTS:LocaleID="1045"
   DTS:ObjectName="ETL DimAirport"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{5C623D18-82C9-4720-82C3-47B3F784E357}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{5F29332F-CC14-4476-A4D7-75AF03A97F8E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -655,11 +655,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150,42"
           Id="Package\Data Flow Task"
           TopLeft="58.2857151420749,143.764707898599" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\Exec Trunc"
           TopLeft="69.1428583203531,44.6588241557349" />
         <EdgeLayout
@@ -693,11 +693,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="131.2,41.6"
+          Size="131,42"
           Id="Package\Data Flow Task\DimAirport"
           TopLeft="53,210" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\Data Flow Task\FFS Airport"
           TopLeft="49.714286560915,40.3764711545" />
         <EdgeLayout
